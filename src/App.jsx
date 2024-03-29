@@ -7,6 +7,8 @@ import {useState} from "react";
 import Telegram from '../public/Telegram.webp';
 import Facebook from '../public/Facebook_logo_(square).png';
 import X from '../public/XXX.png';
+import robot2 from '../public/robot2.jpg';
+import robot1 from '../public/robot1.jpg';
 
 import Card from "./Component/Card.jsx";
 import {Button} from "@mui/material";
@@ -41,19 +43,21 @@ function App() {
               <div style={{ marginTop: '50px', cursor: 'pointer' }}>
                   {isHovered ? (
                       <img
-                          src='../public/robot2.jpg'
+                          src={robot2}
                           width='400px'
                           height='400px'
                           style={{ borderRadius: '10px' }}
                           onMouseLeave={handleMouseLeave}
+                          alt='robot'
                       />
                   ) : (
                       <img
-                          src='../public/robot1.jpg'
+                          src={robot1}
                           width='400px'
                           height='400px'
                           style={{ borderRadius: '10px' }}
                           onMouseEnter={handleMouseEnter}
+                          alt='robot'
                       />
                   )}
               </div>
