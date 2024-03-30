@@ -2,7 +2,7 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
-import {useState} from "react";
+import React, {useState} from "react";
 
 import Telegram from '../public/Telegram.webp';
 import Facebook from '../public/Facebook_logo_(square).png';
