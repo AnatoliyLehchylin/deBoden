@@ -6,12 +6,15 @@ import Facebook from '../public/Facebook_logo_(square).png';
 import X from '../public/XXX.png';
 import robot2 from '../public/robot2.png';
 import robot1 from '../public/robot1.png';
+import robot3 from '../public/robot3.png';
 import robotHead from '../public/robotHead.png';
 import largeButton from '../public/large-button-depress_z10ogpnd.mp3';
 import robot from '../public/44b7bdd82435f5a.mp3';
 import fax from '../public/fax-machine-press-button-beep_g13on34o.mp3';
 import suv from '../public/suv-chevy-blazer-1995-interior-tape-deck-stop-button-press_zjq9isnd.mp3';
 import press from '../public/typewriter-press-single-button_fyi7yke_.mp3';
+
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 import Card from "./Component/Card.jsx";
 import {buyNow, socSeti} from "./style/index.js";
@@ -54,9 +57,23 @@ function App() {
         sectionRefs[index].current.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
+    const copyToClipboard = () => {
+        const textToCopy = '0x13E793E76C38A6362f3F712c4AE365a9174f9b56';
+
+        const textarea = document.createElement('textarea');
+        textarea.value = textToCopy;
+        document.body.appendChild(textarea);
+
+        textarea.select();
+        document.execCommand('copy');
+
+        document.body.removeChild(textarea);
+
+    };
+
     return (
         <div >
-            <div id='header' style={{display: 'flex', width: '100%', position: 'fixed', top: 0, left: 0, padding: '25px 0 25px 0', margin: '0 0', zIndex: 1000}}>
+            <div id='header' style={{display: 'flex', width: '100%', position: 'fixed', top: 0, left: 0, padding: '17px 0 17px 0', margin: '0 0', zIndex: 1000}}>
                 <div style={{maxWidth: '1080px', width: '100%', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center',}}>
                     <a href="https://birdeye.so/token/F1n2Tn7Eb9jTbSQiqy2Z7G4VTbkreHGQqcRKKmwZv726?chain=solana" target="_blank">
                         <Button sx={buyNow}>BUY NOW</Button>
@@ -67,10 +84,10 @@ function App() {
                         justifyContent: 'space-around',
                         alignItems: 'center'
                     }}>
-                        <button style={{ width: '125px', marginLeft: '40px', padding: '5px 10px', textAlign: 'center', backgroundColor: isPress[0] ? '#0e8308' : '#c40668', color: '#FFFFFF', boxShadow: isPress[0] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b', transition: 'box-shadow 0.3s ease-in-out'}} onClick={() => handleClick(0)}>HOME</button>
-                        <button style={{ width: '125px', marginLeft: '40px', padding: '5px 10px', textAlign: 'center', backgroundColor: isPress[1] ? '#0e8308' : '#c40668', color: '#FFFFFF', boxShadow: isPress[1] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b', transition: 'box-shadow 0.3s ease-in-out'}} onClick={() => handleClick(1)}>ABOUT</button>
-                        <button style={{width: '125px', marginLeft: '40px', padding: '5px 10px', textAlign: 'center', backgroundColor: isPress[2] ? '#0e8308' : '#c40668', color: '#FFFFFF', boxShadow: isPress[2] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b', transition: 'box-shadow 0.3s ease-in-out'}} onClick={() => handleClick(2)}>TOKENOMICS</button>
-                        <button style={{width: '125px', marginLeft: '40px', padding: '5px 10px', textAlign: 'center', backgroundColor: isPress[3] ? '#0e8308' : '#c40668', color: '#FFFFFF', boxShadow: isPress[3] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b', transition: 'box-shadow 0.3s ease-in-out'}} onClick={() => handleClick(3)}>HOW TO BAY</button>
+                        <button style={{ width: '135px', marginLeft: '40px', padding: '5px 5px', textAlign: 'center', backgroundColor: isPress[0] ? '#0e8308' : '#c40668', color: '#FFFFFF', boxShadow: isPress[0] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b', transition: 'box-shadow 0.3s ease-in-out'}} onClick={() => handleClick(0)}>HOME</button>
+                        <button style={{ width: '135px', marginLeft: '40px', padding: '5px 5px', textAlign: 'center', backgroundColor: isPress[1] ? '#0e8308' : '#c40668', color: '#FFFFFF', boxShadow: isPress[1] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b', transition: 'box-shadow 0.3s ease-in-out'}} onClick={() => handleClick(1)}>ABOUT</button>
+                        <button style={{width: '135px', marginLeft: '40px', padding: '5px 5px', textAlign: 'center', backgroundColor: isPress[2] ? '#0e8308' : '#c40668', color: '#FFFFFF', boxShadow: isPress[2] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b', transition: 'box-shadow 0.3s ease-in-out'}} onClick={() => handleClick(2)}>TOKENOMICS</button>
+                        <button style={{width: '135px', marginLeft: '40px', padding: '5px 5px', textAlign: 'center', backgroundColor: isPress[3] ? '#0e8308' : '#c40668', color: '#FFFFFF', boxShadow: isPress[3] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b', transition: 'box-shadow 0.3s ease-in-out'}} onClick={() => handleClick(3)}>HOW TO BAY</button>
                     </div>
 
                     <div style={{display: 'flex', alignItems: 'center'}}>
@@ -162,20 +179,41 @@ function App() {
                 TAX BUY 0%
                 Owner: Revoked ( Mint+Freeze )
             </div>
-            <div style={{ maxWidth: '1080px', margin: '0 auto', paddingTop: '100px'}} ref={sectionRefs[3]}>
-                <span style={{fontSize: '24px', fontWeight: '800', color: '#0c39c5'}}>HOW TO BUY</span>1.  Download phantom:
-                go to the app-store or chrome extensions and type in phantom wallet, download & follow the prompts.
-                2.  buy some Solana:
-                purchase Solana either on a centralized exchange or directly through your phantom wallet.
-                3.  Swap to RRX:
-                copy the contract address found on website and paste in Raydium exchange or your TG buy bot to swap your sol for RRX.
-                4.  Import to wallet:
-                if tokens don’t automatically appear in your wallet simply copy the ca and import manually.
+
+            <div style={{ display: 'flex', maxWidth: '1080px', width: '100%', margin: '50px auto', padding: '60px 40px 10px 40px', backgroundColor: '#000000', borderRadius: '10px'}} ref={sectionRefs[3]}>
+                <div style={{width: '60%', display: 'flex', flexDirection: 'column', color: '#BABABA', fontSize: '14px', paddingRight: '100px'}}>
+                    <p style={{fontSize: '26px', fontWeight: '800', color: '#32E7FF'}}>HOW TO BUY</p>
+                    <p>Our simple four-step guide helps make the buying process easier. Don’t allow a complex buying procedure to scare you away. Just click on the icons, and they’ll take you directly to the links.</p>
+                    <p>Contract Address:</p>
+                    <div style={{display: 'flex', backgroundColor: '#C3F9FD', padding: '10px', borderRadius: '3px', width: 'max-content', marginBottom: '10px'}}>
+                        <a href="https://snowtrace.io/address/0x13E793E76C38A6362f3F712c4AE365a9174f9b56" target="_blank" style={{marginRight: '5px', color: '#112f93'}}>0x13E793E76C38A6362f3F712c4AE365a9174f9b56</a>
+                        <ContentCopyIcon sx={{cursor: 'pointer', color: '#000000'}} onClick={copyToClipboard}/>
+                    </div>
+                    <ol>
+                        <li style={{marginBottom: '15px'}}>Download phantom:
+                            go to the app-store or chrome extensions and type in phantom wallet, download & follow the prompts.</li>
+                        <li style={{marginBottom: '15px'}}>buy some Solana:
+                            purchase Solana either on a centralized exchange or directly through your phantom wallet.</li>
+                        <li style={{marginBottom: '15px'}}>Swap to RRX:
+                            copy the contract address found on website and paste in Raydium exchange or your TG buy bot to swap your sol for RRX.</li>
+                        <li>Import to wallet:
+                            if tokens don’t automatically appear in your wallet simply copy the ca and import manually.</li>
+                    </ol>
+                </div>
+                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                    <img
+                        src={robot3}
+                        width='400px'
+                        height='400px'
+                        style={{borderRadius: '10px'}}
+                        alt='robot'
+                    />
+                </div>
             </div>
 
             <div style={{display: 'flex', width: '100%', padding: '25px 0 45px 0', margin: '30px 0 0 0', backgroundColor: '#000000'}}>
                 <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: '1080px', margin: '0 auto', color: '#FFFFFF', textAlign: 'center'}}>
-                    <Avatar src={robotHead} sx={{width: '200px', height: '200px'}}/>
+                    <Avatar src={robotHead} sx={{width: '150px', height: '150px'}}/>
                     <div style={{fontSize: '25px', color: '#63626b', fontWeight: '500', margin: '30px 0 0 0'}}><span style={{color: 'red'}}>R</span><span style={{color: 'orange'}}>O</span><span style={{color: 'yellow'}}>B</span><span style={{color: 'green'}}>O</span><span style={{color: 'blue'}}>T</span><span style={{color: 'indigo'}}>-</span><span style={{color: 'red'}}>R</span><span style={{color: 'orange'}}>A</span><span style={{color: 'yellow'}}>I</span><span style={{color: 'green'}}>N</span><span style={{color: 'blue'}}>B</span><span style={{color: 'indigo'}}>O</span><span style={{color: 'violet'}}>W</span></div>
                     <div style={{margin: '20px 0 30px 0', fontSize: '20px'}}>
                         Join us on this exciting adventure as we journey through a world of robots, rainbows and equality. Your journey with Robot-Rainbow starts now, let's make it legendary!

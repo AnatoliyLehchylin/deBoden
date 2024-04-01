@@ -1,6 +1,7 @@
 export const buyNow = {
     // backgroundColor: '#3253c2',
     // marginRight: '360px',
+    fontFamily: 'Montserrat, sans-serif',
     padding: '7px 20px',
     color: '#FFFFFF',
     boxShadow: '2px 5px 5px #413b3b',

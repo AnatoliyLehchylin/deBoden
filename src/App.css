@@ -4,11 +4,17 @@
   width: 100%;
   /*height: 100vh;*/
   margin: 0px auto 0 auto;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
   /*padding: 2rem;*/
   /*text-align: center;*/
   /*background-size: cover;*/
   /*background-repeat: no-repeat;*/
   /*background-color: #ffffff;*/
+}
+
+#root * {
+  box-sizing: inherit;
 }
 
 .logo {
