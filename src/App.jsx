@@ -6,6 +6,7 @@ import Facebook from '../public/Facebook_logo_(square).png';
 import X from '../public/XXX.png';
 import robot2 from '../public/robot2.png';
 import robot1 from '../public/robot1.png';
+import robotHead from '../public/robotHead.png';
 import largeButton from '../public/large-button-depress_z10ogpnd.mp3';
 import robot from '../public/44b7bdd82435f5a.mp3';
 import fax from '../public/fax-machine-press-button-beep_g13on34o.mp3';
@@ -149,19 +150,19 @@ function App() {
                 <Card index={3}/>
                 <Card index={4}/>
             </div>
-            <div style={{marginBottom: '0px', paddingTop: '100px'}} ref={sectionRefs[1]}>
+            <div style={{ maxWidth: '1080px', margin: '0 auto', paddingTop: '100px'}} ref={sectionRefs[1]}>
                 <span style={{fontSize: '24px', fontWeight: '800', color: '#0c39c5'}}>ABOUT</span>Ladies and gentlemen, extraterrestrials, and AI of all circuits, gather around for the grand introduction of a being like no other, hailing from the vibrant corners of the cosmos, please put your hands, tentacles, or sensory appendages together for the one, the only – Robo-Rainbow X!
                 Robo-Rainbow X is not your average robot. Born from a glitter explosion in the tech-savvy Rainbow Realm, Robo-Rainbow was programmed with one purpose: to spread joy, inclusivity, and, of course, rainbows!
                 Let's give a cosmic round of applause for Robo-Rainbow X, making the universe a brighter, more inclusive place for all life forms, one epic party at a time!
             </div>
-            <div style={{marginBottom: '0px', paddingTop: '100px'}} ref={sectionRefs[2]}>
+            <div style={{ maxWidth: '1080px', margin: '0 auto', paddingTop: '100px'}} ref={sectionRefs[2]}>
                 <span style={{fontSize: '24px', fontWeight: '800', color: '#0c39c5'}}>TOCENOMICS</span>SUPPLY: 10 M
                 LP: 100.00% Of Liquidity Burned
                 TAX SELL 0%
                 TAX BUY 0%
                 Owner: Revoked ( Mint+Freeze )
             </div>
-            <div style={{marginBottom: '350px', paddingTop: '100px'}} ref={sectionRefs[3]}>
+            <div style={{ maxWidth: '1080px', margin: '0 auto', paddingTop: '100px'}} ref={sectionRefs[3]}>
                 <span style={{fontSize: '24px', fontWeight: '800', color: '#0c39c5'}}>HOW TO BUY</span>1.  Download phantom:
                 go to the app-store or chrome extensions and type in phantom wallet, download & follow the prompts.
                 2.  buy some Solana:
@@ -171,6 +172,28 @@ function App() {
                 4.  Import to wallet:
                 if tokens don’t automatically appear in your wallet simply copy the ca and import manually.
             </div>
+
+            <div style={{display: 'flex', width: '100%', padding: '25px 0 45px 0', margin: '30px 0 0 0', backgroundColor: '#000000'}}>
+                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: '1080px', margin: '0 auto', color: '#FFFFFF', textAlign: 'center'}}>
+                    <Avatar src={robotHead} sx={{width: '200px', height: '200px'}}/>
+                    <div style={{fontSize: '25px', color: '#63626b', fontWeight: '500', margin: '30px 0 0 0'}}><span style={{color: 'red'}}>R</span><span style={{color: 'orange'}}>O</span><span style={{color: 'yellow'}}>B</span><span style={{color: 'green'}}>O</span><span style={{color: 'blue'}}>T</span><span style={{color: 'indigo'}}>-</span><span style={{color: 'red'}}>R</span><span style={{color: 'orange'}}>A</span><span style={{color: 'yellow'}}>I</span><span style={{color: 'green'}}>N</span><span style={{color: 'blue'}}>B</span><span style={{color: 'indigo'}}>O</span><span style={{color: 'violet'}}>W</span></div>
+                    <div style={{margin: '20px 0 30px 0', fontSize: '20px'}}>
+                        Join us on this exciting adventure as we journey through a world of robots, rainbows and equality. Your journey with Robot-Rainbow starts now, let's make it legendary!
+                    </div>
+                    <div style={{fontSize: '16px'}}>
+                        Follow us on 𝕏 && Telegram to stay informed of our last updates.
+                    </div>
+                    <div style={{display: 'flex', alignItems: 'center', marginTop: '20px'}}>
+                        <a href="https://ukr.net" target="_blank" style={{display: 'flex'}}>
+                            <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>
+                        </a>
+                        <a href="https://ukr.net" target="_blank" style={{display: 'flex', marginLeft: '40px'}}>
+                            <Avatar src={X} sx={{...socSeti, filter: 'invert(100%)'}} alt="Telegram"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     )
 
