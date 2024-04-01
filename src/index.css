@@ -24,6 +24,9 @@ a:hover {
 
 body {
   /*background-color: #767aee;*/
+  background-image: url("../public/rainbowFon.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
   display: flex;
   place-items: center;

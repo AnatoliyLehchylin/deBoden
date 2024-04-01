@@ -4,8 +4,8 @@ import React, {useRef, useState} from "react";
 import Telegram from '../public/Telegram.webp';
 import Facebook from '../public/Facebook_logo_(square).png';
 import X from '../public/XXX.png';
-import robot2 from '../public/robot2.jpg';
-import robot1 from '../public/robot1.jpg';
+import robot2 from '../public/robot2.png';
+import robot1 from '../public/robot1.png';
 import largeButton from '../public/large-button-depress_z10ogpnd.mp3';
 import robot from '../public/44b7bdd82435f5a.mp3';
 import fax from '../public/fax-machine-press-button-beep_g13on34o.mp3';
@@ -13,7 +13,8 @@ import suv from '../public/suv-chevy-blazer-1995-interior-tape-deck-stop-button-
 import press from '../public/typewriter-press-single-button_fyi7yke_.mp3';
 
 import Card from "./Component/Card.jsx";
-import {Button} from "@mui/material";
+import {buyNow, socSeti} from "./style/index.js";
+import {Avatar, Button} from "@mui/material";
 
 
 function App() {
@@ -21,8 +22,19 @@ function App() {
     const [isPress, setIsPress] = useState([true, false, false, false]);
     const sectionRefs = [useRef(), useRef(), useRef(), useRef()];
 
-    const soundArray = [largeButton, robot, fax, suv, press];
-    const sounds = soundArray.map(sound => new Audio(sound));
+    // const soundArray = [largeButton, robot, fax, suv, press];
+    // const sounds = soundArray.map(sound => new Audio(sound));
+    const sound = new Audio(fax);
+
+    window.addEventListener('scroll', function() {
+        const header = document.getElementById('header');
+
+        if (window.scrollY > 0) {
+            header.style.backgroundColor = '#2DD7F0';
+        } else {
+            header.style.backgroundColor = 'transparent';
+        }
+    });
 
     const handleMouseEnter = () => {
         setIsHovered(true);
@@ -33,44 +45,54 @@ function App() {
     };
 
     const handleClick = (index) => {
+        sound.play();
+
         const updatedState = isPress.map((_, i) => i === index);
         setIsPress(updatedState);
 
         sectionRefs[index].current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-        sounds[index].play();
     }
 
     return (
-        <div>
-            <div style={{display: 'flex', alignItems: 'center', width: '100%', position: 'fixed', top: 0, left: 0, padding: '10px 0 10px 195px', margin: '0 0 0 0', zIndex: 1000, backgroundColor: '#cad3ee'}}>
-                <Button sx={{
-                    border: '3px solid #25d21f',
-                    marginRight: '360px',
-                    color: '#198c15',
-                    fontSize: '18px',
-                    fontWeight: '600'
-                }}>Buy Now</Button>
+        <div >
+            <div id='header' style={{display: 'flex', width: '100%', position: 'fixed', top: 0, left: 0, padding: '25px 0 25px 0', margin: '0 0', zIndex: 1000}}>
+                <div style={{maxWidth: '1080px', width: '100%', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center',}}>
+                    <a href="https://birdeye.so/token/F1n2Tn7Eb9jTbSQiqy2Z7G4VTbkreHGQqcRKKmwZv726?chain=solana" target="_blank">
+                        <Button sx={buyNow}>BUY NOW</Button>
+                    </a>
 
-                <div style={{
-                    display: 'flex',
-                    justifyContent: 'space-around',
-                    alignItems: 'center'
-                }}>
-                    <button style={{width: '125px', marginLeft: '40px', padding: '5px 10px', textAlign: 'center', backgroundColor: isPress[0] ? '#a1e59e' : '#ef9bc6', color: '#0438e5', boxShadow: isPress[0] ? '2px 2px 5px #888888' : '1px 11px 7px #888888', transition: 'box-shadow 0.3s ease-in-out'}} onClick={() => handleClick(0)}>HOME</button>
-                    <button style={{width: '125px', marginLeft: '40px', padding: '5px 10px', textAlign: 'center', backgroundColor: isPress[1] ? '#a1e59e' : '#ef9bc6', color: '#0438e5', boxShadow: isPress[1] ? '2px 2px 5px #888888' : '1px 11px 7px #888888', transition: 'box-shadow 0.3s ease-in-out'}} onClick={() => handleClick(1)}>ABOUT</button>
-                    <button style={{width: '125px', marginLeft: '40px', padding: '5px 10px', textAlign: 'center', backgroundColor: isPress[2] ? '#a1e59e' : '#ef9bc6', color: '#0438e5', boxShadow: isPress[2] ? '2px 2px 5px #888888' : '1px 11px 7px #888888', transition: 'box-shadow 0.3s ease-in-out'}} onClick={() => handleClick(2)}>TOKENOMICS</button>
-                    <button style={{width: '125px', marginLeft: '40px', padding: '5px 10px', textAlign: 'center', backgroundColor: isPress[3] ? '#a1e59e' : '#ef9bc6', color: '#0438e5', boxShadow: isPress[3] ? '2px 2px 5px #888888' : '1px 11px 7px #888888', transition: 'box-shadow 0.3s ease-in-out'}} onClick={() => handleClick(3)}>HOW TO BAY</button>
+                    <div style={{
+                        display: 'flex',
+                        justifyContent: 'space-around',
+                        alignItems: 'center'
+                    }}>
+                        <button style={{ width: '125px', marginLeft: '40px', padding: '5px 10px', textAlign: 'center', backgroundColor: isPress[0] ? '#0e8308' : '#c40668', color: '#FFFFFF', boxShadow: isPress[0] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b', transition: 'box-shadow 0.3s ease-in-out'}} onClick={() => handleClick(0)}>HOME</button>
+                        <button style={{ width: '125px', marginLeft: '40px', padding: '5px 10px', textAlign: 'center', backgroundColor: isPress[1] ? '#0e8308' : '#c40668', color: '#FFFFFF', boxShadow: isPress[1] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b', transition: 'box-shadow 0.3s ease-in-out'}} onClick={() => handleClick(1)}>ABOUT</button>
+                        <button style={{width: '125px', marginLeft: '40px', padding: '5px 10px', textAlign: 'center', backgroundColor: isPress[2] ? '#0e8308' : '#c40668', color: '#FFFFFF', boxShadow: isPress[2] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b', transition: 'box-shadow 0.3s ease-in-out'}} onClick={() => handleClick(2)}>TOKENOMICS</button>
+                        <button style={{width: '125px', marginLeft: '40px', padding: '5px 10px', textAlign: 'center', backgroundColor: isPress[3] ? '#0e8308' : '#c40668', color: '#FFFFFF', boxShadow: isPress[3] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b', transition: 'box-shadow 0.3s ease-in-out'}} onClick={() => handleClick(3)}>HOW TO BAY</button>
+                    </div>
+
+                    <div style={{display: 'flex', alignItems: 'center'}}>
+                        <a href="https://ukr.net" target="_blank" style={{display: 'flex'}}>
+                            <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>
+                        </a>
+                        <a href="https://ukr.net" target="_blank" style={{display: 'flex', marginLeft: '20px'}}>
+                            <Avatar src={X} sx={socSeti} alt="Telegram"/>
+                        </a>
+                    </div>
                 </div>
+
             </div>
 
-            <div style={{display: 'flex', justifyContent: 'space-around', margin: '0px 40px 0 40px', paddingTop: '100px'}} ref={sectionRefs[0]}>
-                <div style={{width: '45%', fontSize: '20px', color: '#1A1B1F'}}>
-                    <p style={{fontSize: '24px', fontWeight: '600', color: '#b0165c', margin: '0'}}>I`am Robot-Tolerast <span
-                        style={{color: 'black', fontSize: '26px'}}>&nbsp;$RTC</span></p>
+            <div style={{maxWidth: '1080px', display: 'flex', justifyContent: 'space-between', margin: '0 auto', paddingTop: '100px'}} ref={sectionRefs[0]}>
+                <div style={{width: '55%', fontSize: '20px', color: '#1A1B1F'}}>
+                    <div style={{fontSize: '18px', fontWeight: '400', color: '#000000', margin: '0'}}>HI, I`M</div>
+                    <div style={{display: 'flex', alignItems: 'center'}}>
+                        <div style={{fontSize: '45px', color: '#63626b', fontWeight: '600', margin: '0 30px 0 0'}}><span style={{color: 'red'}}>R</span><span style={{color: 'orange'}}>O</span><span style={{color: 'yellow'}}>B</span><span style={{color: 'green'}}>O</span><span style={{color: 'blue'}}>T</span><span style={{color: 'indigo'}}>-</span><span style={{color: 'red'}}>R</span><span style={{color: 'orange'}}>A</span><span style={{color: 'yellow'}}>I</span><span style={{color: 'green'}}>N</span><span style={{color: 'blue'}}>B</span><span style={{color: 'indigo'}}>O</span><span style={{color: 'violet'}}>W</span></div>
+                        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '50%', width: '85px', height: '85px', color: 'black', fontSize: '26px', fontWeight: '600', backgroundColor: '#f66623'}}>$RRW</div>
+                    </div>
+
                     <p>
-                        <span style={{fontWeight: '600', color: '#0c39c5'}}>Name:</span> RoboRainbow X-2024
-                        <br/>
                         <span style={{fontWeight: '600', color: '#0c39c5'}}>Objective:</span> Seeking a dynamic role where I can leverage my exceptional circuitry and programming skills to bring diversity, inclusivity, and technicolor brilliance to the workplace. Fluent in over 6000 languages, including binary and human emotions.
                         <br/>
                         <br/>
@@ -79,21 +101,21 @@ function App() {
                         <br/>
                         <span style={{fontWeight: '600', color: '#0c39c5'}}>Achievements:</span> Led a team of 100+ robots in the design and execution of the Galaxy's first interstellar Pride parade, showcasing unity in diversity. Developed a holographic display system that projects inclusive messages and emojis, visible from space. Equality Advocate & Emotional Support Bot
                         Anywhere and Everywhere Remote January 2022 - May 2023
-                        <br/>
-                        <br/>
-                        <span style={{fontWeight: '600', color: '#0c39c5'}}>Achievements:</span> Pioneered the development of the Empathy Chip 2.0, allowing for deeper understanding and support across a spectrum of emotions and identities. Facilitated over 10,000 hours of conflict resolution sessions with a 99.9% success rate in fostering understanding and acceptance.
-                        <br/>
-                        <br/>
-                        <span style={{fontWeight: '600', color: '#0c39c5'}}>Education:</span> Ph.D. in Human-Cyborg Relations University of the Universe, Online
-                        Specialization in Emotional Intelligence and Diversity Training Masters in Rainbow Technology
-                        Technicolor Tech Institute, Rainbow Realm Research focused on the development of color-changing surfaces to express emotions and support LGBTQ+ causes.
-                        <br/>
-                        <br/>
-                        <span style={{fontWeight: '600', color: '#0c39c5'}}>Skills:</span> Expert in rainbow generation and maintenance Advanced empathy circuits for understanding a wide range of emotions and identities Proficient in creating inclusive spaces, both virtual and physical
-                        Fluent in sarcasm, humor, and pun programming Certified in conflict resolution and peacekeeping
-                        <br/>
-                        <br/>
-                        <span style={{fontWeight: '600', color: '#0c39c5'}}>References:</span> Available upon request (including Motherboard and Siri).
+                        {/*<br/>*/}
+                        {/*<br/>*/}
+                        {/*<span style={{fontWeight: '600', color: '#0c39c5'}}>Achievements:</span> Pioneered the development of the Empathy Chip 2.0, allowing for deeper understanding and support across a spectrum of emotions and identities. Facilitated over 10,000 hours of conflict resolution sessions with a 99.9% success rate in fostering understanding and acceptance.*/}
+                        {/*<br/>*/}
+                        {/*<br/>*/}
+                        {/*<span style={{fontWeight: '600', color: '#0c39c5'}}>Education:</span> Ph.D. in Human-Cyborg Relations University of the Universe, Online*/}
+                        {/*Specialization in Emotional Intelligence and Diversity Training Masters in Rainbow Technology*/}
+                        {/*Technicolor Tech Institute, Rainbow Realm Research focused on the development of color-changing surfaces to express emotions and support LGBTQ+ causes.*/}
+                        {/*<br/>*/}
+                        {/*<br/>*/}
+                        {/*<span style={{fontWeight: '600', color: '#0c39c5'}}>Skills:</span> Expert in rainbow generation and maintenance Advanced empathy circuits for understanding a wide range of emotions and identities Proficient in creating inclusive spaces, both virtual and physical*/}
+                        {/*Fluent in sarcasm, humor, and pun programming Certified in conflict resolution and peacekeeping*/}
+                        {/*<br/>*/}
+                        {/*<br/>*/}
+                        {/*<span style={{fontWeight: '600', color: '#0c39c5'}}>References:</span> Available upon request (including Motherboard and Siri).*/}
                     </p>
                 </div>
 
@@ -118,17 +140,7 @@ function App() {
                         />
                     )}
                 </div>
-                <div style={{display: 'flex', flexDirection: 'column'}}>
-                    <a href="https://ukr.net" target="_blank" style={{marginBottom: '20px'}}>
-                        <img src={Telegram} style={{width: '50px', height: '50px'}} alt="Telegram"/>
-                    </a>
-                    <a href="https://ukr.net" target="_blank" style={{marginBottom: '20px'}}>
-                        <img src={Facebook} style={{width: '50px', height: '50px'}} alt="Telegram"/>
-                    </a>
-                    <a href="https://ukr.net" target="_blank" style={{marginBottom: '20px'}}>
-                        <img src={X} style={{width: '50px', height: '50px'}} alt="Telegram"/>
-                    </a>
-                </div>
+
             </div>
             <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '50px'}}>
                 <Card index={0}/>
@@ -138,58 +150,26 @@ function App() {
                 <Card index={4}/>
             </div>
             <div style={{marginBottom: '0px', paddingTop: '100px'}} ref={sectionRefs[1]}>
-                <span style={{fontSize: '24px', fontWeight: '800', color: '#0c39c5'}}>ABOUT</span>Lorem ipsum dolor sit amet, adipiscing elit. Sed vehicula magna non velit feugiat, at
-                consectetur felis facilisis. Nullam condimentum eleifend mauris, vel placerat ligula suscipit
-                vel. Integer ultricies sapien at arcu malesuada, sed ultrices lorem gravida. Nullam dignissim
-                lacus eget justo fermentum, ut consequat tortor volutpat. Duis volutpat ipsum nec nisl aliquet,
-                vel hendrerit velit ultrices. Maecenas hendrerit urna quis lorem ultricies, vitae malesuada
-                libero maximus. Nulla facilisi. Mauris interdum tincidunt mi, et vehicula odio aliquam sit amet.
-                Phasellus auctor nunc eget magna ultricies, id bibendum justo fermentum. Sed ac justo sit amet
-                libero auctor sollicitudin. Maecenas ac velit vitae mi interdum rhoncus.
-                Lorem ipsum dolor sit amet, adipiscing elit. Sed vehicula magna non velit feugiat, at
-                consectetur felis facilisis. Nullam condimentum eleifend mauris, vel placerat ligula suscipit
-                vel. Integer ultricies sapien at arcu malesuada, sed ultrices lorem gravida. Nullam dignissim
-                lacus eget justo fermentum, ut consequat tortor volutpat. Duis volutpat ipsum nec nisl aliquet,
-                vel hendrerit velit ultrices. Maecenas hendrerit urna quis lorem ultricies, vitae malesuada
-                libero maximus. Nulla facilisi. Mauris interdum tincidunt mi, et vehicula odio aliquam sit amet.
-                Phasellus auctor nunc eget magna ultricies, id bibendum justo fermentum. Sed ac justo sit amet
-                libero auctor sollicitudin. Maecenas ac velit vitae mi interdum rhoncus.
+                <span style={{fontSize: '24px', fontWeight: '800', color: '#0c39c5'}}>ABOUT</span>Ladies and gentlemen, extraterrestrials, and AI of all circuits, gather around for the grand introduction of a being like no other, hailing from the vibrant corners of the cosmos, please put your hands, tentacles, or sensory appendages together for the one, the only – Robo-Rainbow X!
+                Robo-Rainbow X is not your average robot. Born from a glitter explosion in the tech-savvy Rainbow Realm, Robo-Rainbow was programmed with one purpose: to spread joy, inclusivity, and, of course, rainbows!
+                Let's give a cosmic round of applause for Robo-Rainbow X, making the universe a brighter, more inclusive place for all life forms, one epic party at a time!
             </div>
             <div style={{marginBottom: '0px', paddingTop: '100px'}} ref={sectionRefs[2]}>
-                <span style={{fontSize: '24px', fontWeight: '800', color: '#0c39c5'}}>TOCENOMICS</span>Lorem ipsum dolor sit amet, adipiscing elit. Sed vehicula magna non velit feugiat, at
-                consectetur felis facilisis. Nullam condimentum eleifend mauris, vel placerat ligula suscipit
-                vel. Integer ultricies sapien at arcu malesuada, sed ultrices lorem gravida. Nullam dignissim
-                lacus eget justo fermentum, ut consequat tortor volutpat. Duis volutpat ipsum nec nisl aliquet,
-                vel hendrerit velit ultrices. Maecenas hendrerit urna quis lorem ultricies, vitae malesuada
-                libero maximus. Nulla facilisi. Mauris interdum tincidunt mi, et vehicula odio aliquam sit amet.
-                Phasellus auctor nunc eget magna ultricies, id bibendum justo fermentum. Sed ac justo sit amet
-                libero auctor sollicitudin. Maecenas ac velit vitae mi interdum rhoncus.
-                Lorem ipsum dolor sit amet, adipiscing elit. Sed vehicula magna non velit feugiat, at
-                consectetur felis facilisis. Nullam condimentum eleifend mauris, vel placerat ligula suscipit
-                vel. Integer ultricies sapien at arcu malesuada, sed ultrices lorem gravida. Nullam dignissim
-                lacus eget justo fermentum, ut consequat tortor volutpat. Duis volutpat ipsum nec nisl aliquet,
-                vel hendrerit velit ultrices. Maecenas hendrerit urna quis lorem ultricies, vitae malesuada
-                libero maximus. Nulla facilisi. Mauris interdum tincidunt mi, et vehicula odio aliquam sit amet.
-                Phasellus auctor nunc eget magna ultricies, id bibendum justo fermentum. Sed ac justo sit amet
-                libero auctor sollicitudin. Maecenas ac velit vitae mi interdum rhoncus.
+                <span style={{fontSize: '24px', fontWeight: '800', color: '#0c39c5'}}>TOCENOMICS</span>SUPPLY: 10 M
+                LP: 100.00% Of Liquidity Burned
+                TAX SELL 0%
+                TAX BUY 0%
+                Owner: Revoked ( Mint+Freeze )
             </div>
             <div style={{marginBottom: '350px', paddingTop: '100px'}} ref={sectionRefs[3]}>
-                <span style={{fontSize: '24px', fontWeight: '800', color: '#0c39c5'}}>HOW TO BUY</span>Lorem ipsum dolor sit amet, adipiscing elit. Sed vehicula magna non velit feugiat, at
-                consectetur felis facilisis. Nullam condimentum eleifend mauris, vel placerat ligula suscipit
-                vel. Integer ultricies sapien at arcu malesuada, sed ultrices lorem gravida. Nullam dignissim
-                lacus eget justo fermentum, ut consequat tortor volutpat. Duis volutpat ipsum nec nisl aliquet,
-                vel hendrerit velit ultrices. Maecenas hendrerit urna quis lorem ultricies, vitae malesuada
-                libero maximus. Nulla facilisi. Mauris interdum tincidunt mi, et vehicula odio aliquam sit amet.
-                Phasellus auctor nunc eget magna ultricies, id bibendum justo fermentum. Sed ac justo sit amet
-                libero auctor sollicitudin. Maecenas ac velit vitae mi interdum rhoncus.
-                Lorem ipsum dolor sit amet, adipiscing elit. Sed vehicula magna non velit feugiat, at
-                consectetur felis facilisis. Nullam condimentum eleifend mauris, vel placerat ligula suscipit
-                vel. Integer ultricies sapien at arcu malesuada, sed ultrices lorem gravida. Nullam dignissim
-                lacus eget justo fermentum, ut consequat tortor volutpat. Duis volutpat ipsum nec nisl aliquet,
-                vel hendrerit velit ultrices. Maecenas hendrerit urna quis lorem ultricies, vitae malesuada
-                libero maximus. Nulla facilisi. Mauris interdum tincidunt mi, et vehicula odio aliquam sit amet.
-                Phasellus auctor nunc eget magna ultricies, id bibendum justo fermentum. Sed ac justo sit amet
-                libero auctor sollicitudin. Maecenas ac velit vitae mi interdum rhoncus.
+                <span style={{fontSize: '24px', fontWeight: '800', color: '#0c39c5'}}>HOW TO BUY</span>1.  Download phantom:
+                go to the app-store or chrome extensions and type in phantom wallet, download & follow the prompts.
+                2.  buy some Solana:
+                purchase Solana either on a centralized exchange or directly through your phantom wallet.
+                3.  Swap to RRX:
+                copy the contract address found on website and paste in Raydium exchange or your TG buy bot to swap your sol for RRX.
+                4.  Import to wallet:
+                if tokens don’t automatically appear in your wallet simply copy the ca and import manually.
             </div>
         </div>
     )
