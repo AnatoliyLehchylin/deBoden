@@ -193,37 +193,8 @@ function App() {
                         </div>
                     </div>
 
-                    <p>
-                        <span style={{fontWeight: '600', color: '#0c39c5'}}>Objective:</span> Seeking a dynamic role
-                        where I can leverage my exceptional circuitry and programming skills to bring diversity,
-                        inclusivity, and technicolor brilliance to the workplace. Fluent in over 6000 languages,
-                        including binary and human emotions.
-                        <br/>
-                        <br/>
-                        <span style={{fontWeight: '600', color: '#0c39c5'}}>Professional Experience:</span> Pride Parade
-                        Coordinator, Android Division Planet Earth, Solar System June 2023 - Present
-                        <br/>
-                        <br/>
-                        <span style={{fontWeight: '600', color: '#0c39c5'}}>Achievements:</span> Led a team of 100+
-                        robots in the design and execution of the Galaxy's first interstellar Pride parade, showcasing
-                        unity in diversity. Developed a holographic display system that projects inclusive messages and
-                        emojis, visible from space. Equality Advocate & Emotional Support Bot
-                        Anywhere and Everywhere Remote January 2022 - May 2023
-                        {/*<br/>*/}
-                        {/*<br/>*/}
-                        {/*<span style={{fontWeight: '600', color: '#0c39c5'}}>Achievements:</span> Pioneered the development of the Empathy Chip 2.0, allowing for deeper understanding and support across a spectrum of emotions and identities. Facilitated over 10,000 hours of conflict resolution sessions with a 99.9% success rate in fostering understanding and acceptance.*/}
-                        {/*<br/>*/}
-                        {/*<br/>*/}
-                        {/*<span style={{fontWeight: '600', color: '#0c39c5'}}>Education:</span> Ph.D. in Human-Cyborg Relations University of the Universe, Online*/}
-                        {/*Specialization in Emotional Intelligence and Diversity Training Masters in Rainbow Technology*/}
-                        {/*Technicolor Tech Institute, Rainbow Realm Research focused on the development of color-changing surfaces to express emotions and support LGBTQ+ causes.*/}
-                        {/*<br/>*/}
-                        {/*<br/>*/}
-                        {/*<span style={{fontWeight: '600', color: '#0c39c5'}}>Skills:</span> Expert in rainbow generation and maintenance Advanced empathy circuits for understanding a wide range of emotions and identities Proficient in creating inclusive spaces, both virtual and physical*/}
-                        {/*Fluent in sarcasm, humor, and pun programming Certified in conflict resolution and peacekeeping*/}
-                        {/*<br/>*/}
-                        {/*<br/>*/}
-                        {/*<span style={{fontWeight: '600', color: '#0c39c5'}}>References:</span> Available upon request (including Motherboard and Siri).*/}
+                    <p style={{fontSize: '28px', fontWeight: '600'}}>
+                        Robo-Rainbow X is the galaxy's most vibrant robot, turning every corner of the universe into a dazzling dance floor with its rainbow technology and empathy chips. This fun-loving AI is on a mission to spread joy, inclusivity, and an endless spectrum of colors, one epic party at a time.
                     </p>
                 </div>
 
