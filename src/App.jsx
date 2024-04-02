@@ -2,11 +2,13 @@ import './App.css'
 import React, {useRef, useState} from "react";
 
 import Telegram from '../public/Telegram.webp';
-import Facebook from '../public/Facebook_logo_(square).png';
+import dextools from '../public/dextools.png';
+import tictok from '../public/tik-tok.png';
 import X from '../public/XXX.png';
 import robot2 from '../public/robot2.png';
 import robot1 from '../public/robot1.png';
 import robot3 from '../public/robot3.png';
+import robot4 from '../public/robot4.png';
 import robotHead from '../public/robotHead.png';
 import largeButton from '../public/large-button-depress_z10ogpnd.mp3';
 import robot from '../public/44b7bdd82435f5a.mp3';
@@ -59,7 +61,7 @@ function App() {
     }
 
     const copyToClipboard = () => {
-        const textToCopy = '0x13E793E76C38A6362f3F712c4AE365a9174f9b56';
+        const textToCopy = 'here will be the address';
 
         const textarea = document.createElement('textarea');
         textarea.value = textToCopy;
@@ -144,7 +146,7 @@ function App() {
                             color: '#FFFFFF',
                             boxShadow: isPress[3] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b',
                             transition: 'box-shadow 0.3s ease-in-out'
-                        }} onClick={() => handleClick(3)}>HOW TO BAY
+                        }} onClick={() => handleClick(3)}>HOW TO BUY
                         </button>
                     </div>
 
@@ -152,8 +154,14 @@ function App() {
                         <a href="https://ukr.net" target="_blank" style={{display: 'flex'}}>
                             <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>
                         </a>
-                        <a href="https://ukr.net" target="_blank" style={{display: 'flex', marginLeft: '20px'}}>
-                            <Avatar src={X} sx={socSeti} alt="Telegram"/>
+                        <a href="https://ukr.net" target="_blank" style={{display: 'flex', marginLeft: '10px'}}>
+                            <Avatar src={X} sx={socSeti} alt="X"/>
+                        </a>
+                        <a href="https://ukr.net" target="_blank" style={{display: 'flex', marginLeft: '10px'}}>
+                            <Avatar src={dextools} sx={socSeti} alt="Dextools"/>
+                        </a>
+                        <a href="https://ukr.net" target="_blank" style={{display: 'flex', marginLeft: '10px'}}>
+                            <Avatar src={tictok} sx={socSeti} alt="Tic-Tok"/>
                         </a>
                     </div>
                 </div>
@@ -168,7 +176,7 @@ function App() {
                 paddingTop: '100px'
             }} ref={sectionRefs[0]}>
                 <div style={{width: '55%', fontSize: '20px', color: '#1A1B1F'}}>
-                    <div style={{fontSize: '18px', fontWeight: '400', color: '#000000', margin: '0'}}>HI, I`M</div>
+                    <div style={{fontSize: '28px', fontWeight: '600', color: '#000000', margin: '0'}}>HI, I`M</div>
                     <div style={{display: 'flex', alignItems: 'center'}}>
                         <div style={{fontSize: '45px', color: '#63626b', fontWeight: '600', margin: '0 30px 0 0'}}><span
                             style={{color: 'red'}}>R</span><span style={{color: 'orange'}}>O</span><span
@@ -177,20 +185,21 @@ function App() {
                             style={{color: 'red'}}>R</span><span style={{color: 'orange'}}>A</span><span
                             style={{color: 'yellow'}}>I</span><span style={{color: 'green'}}>N</span><span
                             style={{color: 'blue'}}>B</span><span style={{color: 'indigo'}}>O</span><span
-                            style={{color: 'violet'}}>W</span></div>
-                        <div style={{
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            borderRadius: '50%',
-                            width: '85px',
-                            height: '85px',
-                            color: 'black',
-                            fontSize: '26px',
-                            fontWeight: '600',
-                            backgroundColor: '#f66623'
-                        }}>$RRW
-                        </div>
+                            style={{color: 'violet'}}>W</span>&nbsp;<span
+                            style={{color: 'red'}}>X</span></div>
+                        {/*<div style={{*/}
+                        {/*    display: 'flex',*/}
+                        {/*    justifyContent: 'center',*/}
+                        {/*    alignItems: 'center',*/}
+                        {/*    borderRadius: '50%',*/}
+                        {/*    width: '85px',*/}
+                        {/*    height: '85px',*/}
+                        {/*    color: 'black',*/}
+                        {/*    fontSize: '26px',*/}
+                        {/*    fontWeight: '600',*/}
+                        {/*    backgroundColor: '#f66623'*/}
+                        {/*}}>$RRX*/}
+                        {/*</div>*/}
                     </div>
 
                     <p style={{fontSize: '28px', fontWeight: '600'}}>
@@ -209,14 +218,33 @@ function App() {
                             alt='robot'
                         />
                     ) : (
-                        <img
-                            src={robot1}
-                            width='400px'
-                            height='400px'
-                            style={{borderRadius: '10px'}}
-                            onMouseEnter={handleMouseEnter}
-                            alt='robot'
-                        />
+                        <div style={{position: 'relative'}}>
+                            <img
+                                src={robot1}
+                                width='400px'
+                                height='400px'
+                                style={{borderRadius: '10px'}}
+                                onMouseEnter={handleMouseEnter}
+                                alt='robot'
+                            />
+                            <div style={{
+                                position: 'absolute',
+                                top: '50px',
+                                left: '295px',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                borderRadius: '50%',
+                                width: '85px',
+                                height: '85px',
+                                color: 'black',
+                                fontSize: '26px',
+                                fontWeight: '600',
+                                backgroundColor: '#f66623'
+                            }}>$RRX
+                            </div>
+                        </div>
+
                     )}
                 </div>
 
@@ -274,12 +302,49 @@ function App() {
                 <Card index={4}/>
             </div>
 
-            <div style={{maxWidth: '1080px', margin: '0 auto', paddingTop: '100px'}} ref={sectionRefs[2]}>
-                <span style={{fontSize: '24px', fontWeight: '800', color: '#0c39c5'}}>TOCENOMICS</span>SUPPLY: 10 M
-                LP: 100.00% Of Liquidity Burned
-                TAX SELL 0%
-                TAX BUY 0%
-                Owner: Revoked ( Mint+Freeze )
+            <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                maxWidth: '1080px',
+                width: '100%',
+                margin: '50px auto',
+                padding: '80px 20px 10px 20px',
+                backgroundColor: '#000000',
+                borderRadius: '10px'
+            }} ref={sectionRefs[2]}>
+                <div style={{display: 'flex', justifyContent: 'center', marginBottom: '20px'}}>
+                    <img src={robot4} style={{width: '150px', height: '150px'}}/>
+                </div>
+                <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#E1E1E1', fontSize: '18px', width: '33%', backgroundColor: '#403f44', borderTopLeftRadius: '10px', borderBottomRightRadius: '10px', marginRight: '20px'}}>
+                        <p style={{color: '#32E7FF', fontSize: '18px', fontWeight: '500'}}>SUPPLY:</p>
+                        <p>1 Billion</p>
+                    </div>
+                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#E1E1E1', fontSize: '18px', width: '33%', backgroundColor: '#63626b', borderRadius: '10px', marginRight: '20px'}}>
+                        <p style={{color: '#32E7FF', fontSize: '18px', fontWeight: '500'}}>LP:</p>
+                        <p>90.00% Of Liquidity Burned</p>
+                    </div>
+                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#E1E1E1', fontSize: '18px', width: '33%', backgroundColor: '#403f44', borderTopRightRadius: '10px', borderBottomLeftRadius: '10px'}}>
+                        <p style={{color: '#32E7FF', fontSize: '18px', fontWeight: '500'}}>10% Tokens</p>
+                        <p>for Airdrop, Marketing, CEX listing</p>
+                    </div>
+                </div>
+
+                <div style={{display: 'flex', justifyContent: 'space-between', marginTop: '20px'}}>
+                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#E1E1E1', fontSize: '18px', width: '33%', backgroundColor: '#63626b', borderTopLeftRadius: '10px', borderBottomRightRadius: '10px', marginRight: '20px'}}>
+                        <p style={{color: '#32E7FF', fontSize: '18px', fontWeight: '500'}}>TAX SELL:</p>
+                        <p>0%</p>
+                    </div>
+                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#E1E1E1', fontSize: '18px', width: '33%', backgroundColor: '#403f44', borderRadius: '10px', marginRight: '20px'}}>
+                        <p style={{color: '#32E7FF', fontSize: '18px', fontWeight: '500'}}>TAX BUY:</p>
+                        <p>0%</p>
+                    </div>
+                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#E1E1E1', fontSize: '18px', width: '33%', backgroundColor: '#63626b', borderTopRightRadius: '10px', borderBottomLeftRadius: '10px'}}>
+                        <p style={{color: '#32E7FF', fontSize: '18px', fontWeight: '500'}}>Owner:</p>
+                        <p>Revoked ( Mint+Freeze )</p>
+                    </div>
+                </div>
+
             </div>
 
             <div style={{
@@ -301,8 +366,7 @@ function App() {
                 }}>
                     <p style={{fontSize: '26px', fontWeight: '800', color: '#32E7FF'}}>HOW TO BUY</p>
                     <p>Our simple four-step guide helps make the buying process easier. Don’t allow a complex buying
-                        procedure to scare you away. Just click on the icons, and they’ll take you directly to the
-                        links.</p>
+                        procedure to scare you away.</p>
                     <p>Contract Address:</p>
                     <div style={{
                         display: 'flex',
@@ -314,7 +378,7 @@ function App() {
                     }}>
                         <a href="https://snowtrace.io/address/0x13E793E76C38A6362f3F712c4AE365a9174f9b56"
                            target="_blank"
-                           style={{marginRight: '5px', color: '#112f93'}}>0x13E793E76C38A6362f3F712c4AE365a9174f9b56</a>
+                           style={{marginRight: '5px', color: '#112f93'}}>here will be the address</a>
                         <ContentCopyIcon sx={{cursor: 'pointer', color: '#000000'}} onClick={copyToClipboard}/>
                     </div>
                     <ol style={{paddingLeft: '14px'}}>
@@ -348,7 +412,7 @@ function App() {
             <div style={{
                 display: 'flex',
                 width: '100%',
-                padding: '25px 0 45px 0',
+                padding: '25px 0 25px 0',
                 margin: '30px 0 0 0',
                 backgroundColor: '#000000'
             }}>
@@ -369,22 +433,30 @@ function App() {
                         style={{color: 'red'}}>R</span><span style={{color: 'orange'}}>A</span><span
                         style={{color: 'yellow'}}>I</span><span style={{color: 'green'}}>N</span><span
                         style={{color: 'blue'}}>B</span><span style={{color: 'indigo'}}>O</span><span
-                        style={{color: 'violet'}}>W</span></div>
-                    <div style={{margin: '20px 0 30px 0', fontSize: '20px'}}>
+                        style={{color: 'violet'}}>W</span>&nbsp;<span
+                        style={{color: 'red'}}>X</span></div>
+                    <div style={{margin: '20px 0 30px 0', fontSize: '20px', color: '#E1E1E1'}}>
                         Join us on this exciting adventure as we journey through a world of robots, rainbows and
                         equality. Your journey with Robot-Rainbow starts now, let's make it legendary!
                     </div>
-                    <div style={{fontSize: '16px'}}>
+                    <div style={{fontSize: '16px', color: '#BABABA'}}>
                         Follow us on 𝕏 & Telegram to stay informed of our last updates.
                     </div>
                     <div style={{display: 'flex', alignItems: 'center', marginTop: '20px'}}>
                         <a href="https://ukr.net" target="_blank" style={{display: 'flex'}}>
                             <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>
                         </a>
-                        <a href="https://ukr.net" target="_blank" style={{display: 'flex', marginLeft: '40px'}}>
-                            <Avatar src={X} sx={{...socSeti, filter: 'invert(100%)'}} alt="Telegram"/>
+                        <a href="https://ukr.net" target="_blank" style={{display: 'flex', marginLeft: '20px'}}>
+                            <Avatar src={X} sx={{...socSeti, filter: 'invert(100%)'}} alt="X"/>
+                        </a>
+                        <a href="https://ukr.net" target="_blank" style={{display: 'flex', marginLeft: '20px'}}>
+                            <Avatar src={dextools} sx={socSeti} alt="Dextools"/>
+                        </a>
+                        <a href="https://ukr.net" target="_blank" style={{display: 'flex', marginLeft: '20px'}}>
+                            <Avatar src={tictok} sx={{...socSeti, filter: 'invert(100%)'}} alt="Tic-Tok"/>
                         </a>
                     </div>
+                    <p style={{color: '#BABABA'}}>Contuct us: <span>there will be an email here</span></p>
                 </div>
             </div>
 
