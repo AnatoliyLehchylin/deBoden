@@ -21,7 +21,9 @@ function Card({ index }) {
                 width: isFlipped ? '150px' : '100px',
                 marginRight: '10px',
                 cursor: 'pointer',
-                opacity: isFlipped ? 1 : 0.5,
+                border: '1px solid #f6cab6',
+                borderRadius: '8px',
+                // opacity: isFlipped ? 1 : 0.8,
                 transition: 'opacity 1s ease, width 1s ease'
             }} alt="card" />
         </div>
