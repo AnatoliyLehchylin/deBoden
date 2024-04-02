@@ -316,31 +316,31 @@ function App() {
                     <img src={robot4} style={{width: '150px', height: '150px'}}/>
                 </div>
                 <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#E1E1E1', fontSize: '18px', width: '33%', backgroundColor: '#403f44', borderTopLeftRadius: '10px', borderBottomRightRadius: '10px', marginRight: '20px'}}>
+                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#FFFFFF', fontSize: '18px', fontWeight: '500', width: '33%', backgroundColor: '#403f44', borderTopLeftRadius: '10px', borderBottomRightRadius: '10px', marginRight: '20px'}}>
                         <p style={{color: '#32E7FF', fontSize: '18px', fontWeight: '500'}}>SUPPLY:</p>
                         <p>1 Billion</p>
                     </div>
-                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#E1E1E1', fontSize: '18px', width: '33%', backgroundColor: '#63626b', borderRadius: '10px', marginRight: '20px'}}>
-                        <p style={{color: '#32E7FF', fontSize: '18px', fontWeight: '500'}}>LP:</p>
+                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#FFFFFF', fontSize: '18px', fontWeight: '500', width: '33%', backgroundColor: '#63626b', borderRadius: '10px', marginRight: '20px'}}>
+                        <p style={{color: '#32E7FF', fontSize: '18px', fontWeight: '500'}}>LIQUIDITY POOL:</p>
                         <p>90.00% Of Liquidity Burned</p>
                     </div>
-                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#E1E1E1', fontSize: '18px', width: '33%', backgroundColor: '#403f44', borderTopRightRadius: '10px', borderBottomLeftRadius: '10px'}}>
-                        <p style={{color: '#32E7FF', fontSize: '18px', fontWeight: '500'}}>10% Tokens</p>
-                        <p>for Airdrop, Marketing, CEX listing</p>
+                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#FFFFFF', fontSize: '18px', fontWeight: '500', width: '33%', backgroundColor: '#403f44', borderTopRightRadius: '10px', borderBottomLeftRadius: '10px'}}>
+                        <p style={{color: '#32E7FF', fontSize: '18px', fontWeight: '500'}}>10% TOKENS:</p>
+                        <p>Airdrop, Marketing, CEX listing</p>
                     </div>
                 </div>
 
                 <div style={{display: 'flex', justifyContent: 'space-between', marginTop: '20px'}}>
-                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#E1E1E1', fontSize: '18px', width: '33%', backgroundColor: '#63626b', borderTopLeftRadius: '10px', borderBottomRightRadius: '10px', marginRight: '20px'}}>
+                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#FFFFFF', fontSize: '18px', fontWeight: '500', width: '33%', backgroundColor: '#63626b', borderTopLeftRadius: '10px', borderBottomRightRadius: '10px', marginRight: '20px'}}>
                         <p style={{color: '#32E7FF', fontSize: '18px', fontWeight: '500'}}>TAX SELL:</p>
                         <p>0%</p>
                     </div>
-                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#E1E1E1', fontSize: '18px', width: '33%', backgroundColor: '#403f44', borderRadius: '10px', marginRight: '20px'}}>
+                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#FFFFFF', fontSize: '18px', fontWeight: '500', width: '33%', backgroundColor: '#403f44', borderRadius: '10px', marginRight: '20px'}}>
                         <p style={{color: '#32E7FF', fontSize: '18px', fontWeight: '500'}}>TAX BUY:</p>
                         <p>0%</p>
                     </div>
-                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#E1E1E1', fontSize: '18px', width: '33%', backgroundColor: '#63626b', borderTopRightRadius: '10px', borderBottomLeftRadius: '10px'}}>
-                        <p style={{color: '#32E7FF', fontSize: '18px', fontWeight: '500'}}>Owner:</p>
+                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#FFFFFF', fontSize: '18px', fontWeight: '500', width: '33%', backgroundColor: '#63626b', borderTopRightRadius: '10px', borderBottomLeftRadius: '10px'}}>
+                        <p style={{color: '#32E7FF', fontSize: '18px', fontWeight: '500'}}>OWNER:</p>
                         <p>Revoked ( Mint+Freeze )</p>
                     </div>
                 </div>
@@ -386,7 +386,7 @@ function App() {
                             go to the app-store or chrome extensions and type in phantom wallet, download & follow the
                             prompts.
                         </li>
-                        <li style={{marginBottom: '15px'}}>buy some Solana:
+                        <li style={{marginBottom: '15px'}}>Buy some Solana:
                             purchase Solana either on a centralized exchange or directly through your phantom wallet.
                         </li>
                         <li style={{marginBottom: '15px'}}>Swap to RRX:
@@ -440,7 +440,7 @@ function App() {
                         equality. Your journey with Robot-Rainbow starts now, let's make it legendary!
                     </div>
                     <div style={{fontSize: '16px', color: '#BABABA'}}>
-                        Follow us on 𝕏 & Telegram to stay informed of our last updates.
+                        Follow us on 𝕏, Telegram, Dextools & TikTok to stay informed of our last updates.
                     </div>
                     <div style={{display: 'flex', alignItems: 'center', marginTop: '20px'}}>
                         <a href="https://ukr.net" target="_blank" style={{display: 'flex'}}>
