@@ -1,11 +1,9 @@
 export const buyNow = {
-    // backgroundColor: '#3253c2',
-    // marginRight: '360px',
     fontFamily: 'Montserrat, sans-serif',
-    padding: '7px 20px',
+    padding: '5px 10px',
     color: '#FFFFFF',
     boxShadow: '2px 5px 5px #413b3b',
-    fontSize: '18px',
+    fontSize: '16px',
     fontWeight: '600',
     animation: 'shakeAnimation 0.5s infinite alternate ease-in-out, colorBlink 0.5s infinite linear',
     '@keyframes shakeAnimation': {
@@ -23,20 +21,66 @@ export const buyNow = {
         },
     },
     '@keyframes colorBlink': {
-        '0%': { backgroundColor: '#3253c2' }, // Исходный цвет фона
-        '50%': { backgroundColor: '#486ddc' }, // Цвет фона для мерцания
-        '100%': { backgroundColor: '#3253c2' }, // Возврат к исходному цвету фона
+        '0%': {backgroundColor: '#3253c2'}, // Исходный цвет фона
+        '50%': {backgroundColor: '#486ddc'}, // Цвет фона для мерцания
+        '100%': {backgroundColor: '#3253c2'}, // Возврат к исходному цвету фона
     },
 };
 
 export const socSeti = {
     alignItems: 'center',
-    width: '30px',
-    height: '30px',
+    width: '25px',
+    height: '25px',
     transition: 'transform 0.3s ease',
     ':hover': {
         transform: 'scale(1.2)'
     }
 };
 
+export const HeaderWrap = {
+    display: 'flex',
+    width: '100%',
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    padding: '17px 0 17px 0',
+    margin: '0 0',
+    zIndex: 1000
+};
 
+export const ButtonWrap = {
+    maxWidth: '1080px',
+    width: '100%',
+    margin: '0 auto',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+};
+
+export const ButtonWrapNav = {
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center'
+};
+
+export const ButtonNav = {
+    width: '115px',
+    fontSize: '14px',
+    marginLeft: '30px',
+    padding: '5px 5px',
+    textAlign: 'center',
+    color: '#FFFFFF',
+    transition: 'box-shadow 0.3s ease-in-out'
+};
+
+export const MarginSocSeti = {
+    display: 'flex', marginLeft: '10px'
+};
+
+export const CardWrap = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: '50px',
+    backgroundColor: '#000000'
+}
