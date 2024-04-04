@@ -42,8 +42,8 @@ export const MainImg = {
         height: '250px'
     },
     '@media (max-width: 590px)': {
-        width: '150px',
-        height: '150px'
+        width: '200px',
+        height: '200px'
     },
 };
 

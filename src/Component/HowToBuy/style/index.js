@@ -35,7 +35,7 @@ export const WrapLeft = {
         width: '100%',
     },
     '@media (max-width: 440px)': {
-        fontSize: '10px',
+        fontSize: '12px',
     },
 };
 

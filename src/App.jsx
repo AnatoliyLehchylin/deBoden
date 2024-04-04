@@ -108,9 +108,12 @@ function App() {
                             <Box id='burger' sx={{
                                 display: 'flex',
                                 flexDirection: 'column',
+                                padding: '10px',
+                                borderRadius: '8px',
                                 position: 'absolute',
                                 top: '40px',
                                 right: '45px',
+                                backgroundColor: 'rgba(45, 215, 240, 0.7)',
                                 '@media (min-width: 440px)': {
                                     display: 'none'
                                 }
@@ -146,7 +149,7 @@ function App() {
                                 }} onClick={() => handleClick(4)}>ROADMAP
                                 </Button>
                             </Box> :
-                            <Box sx={{boxSizing: 'border-box', padding: '10px 10px 0 10px'}} onClick={burgerMenu}>
+                            <Box sx={{padding: '15px 15px 0 15px', margin: '0'}} onClick={burgerMenu}>
                                 <MenuIcon fontSize='large' color='primary'
                                           sx={{'@media (min-width: 441px)': {display: 'none'}}}/>
                             </Box>
