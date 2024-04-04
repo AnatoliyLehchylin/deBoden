@@ -1,8 +1,8 @@
 import React from 'react';
-import {Avatar} from "@mui/material";
+import {Avatar, Box, Typography} from "@mui/material";
 import robotHead from "../../../public/robotHead.png";
 import Telegram from "../../../public/Telegram.webp";
-import { SocSetiWrap, socSeti, FooterWrap, ContentWrap, avatar, NameWrap, FooterText, Follow } from "./style/index.js";
+import { SocSetiWrap, socSeti, FooterWrap, ContentWrap, avatar, NameWrap, FooterText, Follow, Email } from "./style/index.js";
 import X from "../../../public/XXX.png";
 import tictok from "../../../public/tik-tok.png";
 import {Footer} from "../../Data/index.js";
@@ -17,18 +17,18 @@ function FooterComponent() {
         <div style={FooterWrap}>
             <div style={ContentWrap}>
                 <Avatar src={robotHead} sx={avatar}/>
-                <div style={NameWrap}><span
+                <Box sx={NameWrap}><span
                     style={{color: 'red'}}>R</span><span style={{color: 'orange'}}>O</span><span
                     style={{color: 'yellow'}}>B</span><span style={{color: 'blue'}}>O</span><span style={{color: 'indigo'}}>-</span><span
                     style={{color: 'red'}}>R</span><span style={{color: 'orange'}}>A</span><span
                     style={{color: 'yellow'}}>I</span><span style={{color: 'green'}}>N</span><span
                     style={{color: 'blue'}}>B</span><span style={{color: 'indigo'}}>O</span><span
                     style={{color: '#c72b96'}}>W</span>&nbsp;<span
-                    style={{color: 'red'}}>X</span></div>
-                <div style={FooterText}>{Footer}</div>
-                <div style={Follow}>
+                    style={{color: 'red'}}>X</span></Box>
+                <Box sx={FooterText}>{Footer}</Box>
+                <Box sx={Follow}>
                     Follow us on 𝕏, Telegram, TikTok, Birdeye & DEX Screener to stay informed of our last updates.
-                </div>
+                </Box>
                 <div style={SocSetiWrap}>
                     <a href="https://ukr.net" target="_blank" style={{display: 'flex'}}>
                         <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>
@@ -46,7 +46,7 @@ function FooterComponent() {
                         <Avatar src={dexscreener} sx={socSeti} alt="dexscreener"/>
                     </a>
                 </div>
-                <p style={{color: '#BABABA'}}>Contact us: <span>there will be an email here</span></p>
+                <Typography sx={Email}>Contact us: <span>there will be an email here</span></Typography>
             </div>
         </div>
 

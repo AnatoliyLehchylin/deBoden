@@ -8,6 +8,7 @@ import image5 from '../../../public/image5.jpg';
 import imagedef from '../../../public/imagedef.jpg';
 
 import { CardStyle } from './style/index.js';
+import {Box} from "@mui/material";
 
 function Card({ index }) {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -18,12 +19,12 @@ function Card({ index }) {
     };
 
     return (
-        <div className="card" onClick={toggleImage}>
-            <img src={isFlipped ? images[index] : imagedef} style={{
-                ...CardStyle,
-                width: isFlipped ? '150px' : '100px'
-            }} alt="card" />
-        </div>
+        <Box sx={{
+            ...CardStyle,
+            width: isFlipped ? '150px' : '100px'
+        }} onClick={toggleImage}>
+            <img src={isFlipped ? images[index] : imagedef} style={{width: '100%', borderRadius: '8px'}} alt="card" />
+        </Box>
     );
 }
 

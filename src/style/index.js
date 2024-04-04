@@ -3,7 +3,7 @@ export const buyNow = {
     padding: '5px 10px',
     color: '#FFFFFF',
     boxShadow: '2px 5px 5px #413b3b',
-    fontSize: '16px',
+    fontSize: '18px',
     fontWeight: '600',
     animation: 'shakeAnimation 0.5s infinite alternate ease-in-out, colorBlink 0.5s infinite linear',
     '@keyframes shakeAnimation': {
@@ -25,6 +25,19 @@ export const buyNow = {
         '50%': {backgroundColor: '#486ddc'}, // Цвет фона для мерцания
         '100%': {backgroundColor: '#3253c2'}, // Возврат к исходному цвету фона
     },
+    '@media (max-width: 1100px)': {
+        display: 'none',
+    },
+    '@media (max-width: 710px)': {
+        fontSize: '14px',
+        fontWeight: '400',
+        padding: '3px 5px',
+    },
+    '@media (max-width: 590px)': {
+        fontSize: '12px',
+        fontWeight: '400',
+        padding: '3px 3px',
+    },
 };
 
 export const socSeti = {
@@ -34,7 +47,11 @@ export const socSeti = {
     transition: 'transform 0.3s ease',
     ':hover': {
         transform: 'scale(1.2)'
-    }
+    },
+    '@media (max-width: 710px)': {
+        width: '20px',
+        height: '20px',
+    },
 };
 
 export const HeaderWrap = {
@@ -45,7 +62,10 @@ export const HeaderWrap = {
     left: 0,
     padding: '17px 0 17px 0',
     margin: '0 0',
-    zIndex: 1000
+    zIndex: 1000,
+    '@media (max-width: 440px)': {
+        padding: '17px 0 0 0',
+    },
 };
 
 export const ButtonWrap = {
@@ -55,22 +75,66 @@ export const ButtonWrap = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+    '@media (max-width: 1100px)': {
+        flexDirection: 'column',
+        justifyContent: 'center'
+    }
 };
+
+export const WrapMiddle = {
+    display: 'none',
+    '@media (max-width: 1100px)': {
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'space-around',
+        marginBottom: '20px'
+    },
+    '@media (max-width: 440px)': {
+        position: 'relative'
+    },
+};
+
 
 export const ButtonWrapNav = {
     display: 'flex',
     justifyContent: 'space-around',
-    alignItems: 'center'
+    alignItems: 'center',
+    '@media (max-width: 440px)': {
+        display: 'none'
+    },
 };
 
 export const ButtonNav = {
+    fontFamily: 'Montserrat, sans-serif',
     width: '115px',
     fontSize: '14px',
     marginLeft: '30px',
     padding: '5px 5px',
     textAlign: 'center',
     color: '#FFFFFF',
-    transition: 'box-shadow 0.3s ease-in-out'
+    transition: 'box-shadow 0.3s ease-in-out',
+    '@media (max-width: 710px)': {
+        width: '100px',
+        fontSize: '12px',
+        marginLeft: '20px',
+        padding: '3px 3px',
+    },
+    '@media (max-width: 590px)': {
+        width: '77px',
+        fontSize: '10px',
+        marginLeft: '10px',
+        padding: '3px 2px',
+    },
+    '@media (max-width: 440px)': {
+        width: '115px',
+        fontSize: '14px',
+        padding: '5px 5px',
+        marginBottom: '10px'
+    },
+    ':hover': {
+        color: '#000000',
+        backgroundColor: '#c40668'
+    }
 };
 
 export const MarginSocSeti = {
@@ -82,5 +146,15 @@ export const CardWrap = {
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: '50px',
-    backgroundColor: '#000000'
+    padding: '32px 10px',
+    backgroundColor: '#000000',
+    '@media (max-width: 710px)': {
+        padding: '25px 10px',
+    },
+    '@media (max-width: 590px)': {
+        padding: '15px 10px',
+    },
+    '@media (max-width: 440px)': {
+        padding: '10px 10px',
+    },
 }

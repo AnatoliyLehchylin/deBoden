@@ -1,11 +1,19 @@
 export const Wrapper = {
     display: 'flex',
     maxWidth: '1080px',
-    width: '100%',
+    width: '90%',
     margin: '50px auto',
     padding: '60px 60px 10px 60px',
     backgroundColor: '#000000',
-    borderRadius: '10px'
+    borderRadius: '10px',
+    '@media (max-width: 890px)': {
+        flexDirection: 'column',
+        // justifyContent: 'center',
+        alignItems: 'center',
+    },
+    '@media (max-width: 440px)': {
+        padding: '70px 20px 10px 20px',
+    },
 };
 
 export const WrapLeft = {
@@ -14,7 +22,21 @@ export const WrapLeft = {
     flexDirection: 'column',
     color: '#BABABA',
     fontSize: '14px',
-    paddingRight: '60px'
+    paddingRight: '60px',
+    '@media (max-width: 1100px)': {
+        width: '70%',
+        paddingRight: '30px',
+    },
+    '@media (max-width: 960px)': {
+        width: '80%',
+        paddingRight: '20px',
+    },
+    '@media (max-width: 890px)': {
+        width: '100%',
+    },
+    '@media (max-width: 440px)': {
+        fontSize: '10px',
+    },
 };
 
 export const How = {
@@ -31,9 +53,29 @@ export const ContractAddress = {
 };
 
 export const WrapRight = {
-    display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: '70px'
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: '70px',
+    width: '400px',
+    height: '400px',
+    '@media (max-width: 1100px)': {
+        width: '300px',
+        height: '300px',
+    },
+    '@media (max-width: 890px)': {
+        padding: '20px 0'
+    },
+    '@media (max-width: 590px)': {
+        width: '200px',
+        height: '200px',
+    },
+    '@media (max-width: 440px)': {
+        width: '150px',
+        height: '150px',
+    },
 };
 
 export const Img = {
-    width: '400px', height: '400px', borderRadius: '10px'
+    width: '100%', borderRadius: '10px'
 }

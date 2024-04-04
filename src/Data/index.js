@@ -16,9 +16,9 @@ export const HowToBuyFour = "Import to wallet: if tokens don’t automatically a
 
 export const Footer = "Join us on this exciting adventure as we journey through a world of robots, rainbows and equality. Your journey with Robo-Rainbow X starts now, let's make it legendary!";
 
-export const Q224 = "Establishment of liquidity pools and listings on leading DEX&CEX";
+export const Q224 = "Launch Robo-Rainbow X Token with a focus on secure, transparent distribution";
 
-export const Q324 = "Launch Robo-Rainbow X Token with a focus on secure, transparent distribution";
+export const Q324 = "Establishment of liquidity pools and listings on leading DEX&CEX";
 
 export const Q424 = "Establish strategic partnerships to enhance Robo-Rainbow X's utility";
 

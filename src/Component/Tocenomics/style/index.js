@@ -2,19 +2,28 @@ export const Wrap = {
     display: 'flex',
     flexDirection: 'column',
     maxWidth: '1080px',
-    width: '100%',
+    width: '90%',
     margin: '50px auto',
-    padding: '80px 20px 10px 20px',
+    padding: '90px 20px 10px 20px',
     backgroundColor: '#000000',
     borderRadius: '10px'
 };
 
 export const WrapImg = {
-    display: 'flex', justifyContent: 'center', marginBottom: '20px'
+    display: 'flex',
+    justifyContent: 'center',
+    margin: '0 auto 20px auto',
+    // marginBottom: '20px',
+    width: '150px',
+    height: '150px',
+    '@media (max-width: 440px)': {
+        width: '100px',
+        height: '100px',
+    },
 };
 
 export const Img = {
-    width: '150px', height: '150px'
+    width: '100%'
 };
 
 export const WrapElemDark = {
@@ -28,7 +37,19 @@ export const WrapElemDark = {
     backgroundColor: '#403f44',
     borderTopLeftRadius: '10px',
     borderBottomRightRadius: '10px',
-    marginRight: '20px'
+    marginRight: '20px',
+    padding: '0 10px',
+    '@media (max-width: 710px)': {
+        fontSize: '16px',
+    },
+    '@media (max-width: 590px)': {
+        // fontSize: '14px',
+        width: '50%',
+        marginRight: '10px'
+    },
+    '@media (max-width: 440px)': {
+        fontSize: '12px',
+    },
 };
 
 export const WrapElemLight = {
@@ -42,9 +63,31 @@ export const WrapElemLight = {
     backgroundColor: '#63626b',
     borderTopLeftRadius: '10px',
     borderBottomRightRadius: '10px',
-    marginRight: '20px'
+    marginRight: '20px',
+    padding: '0 10px',
+    '@media (max-width: 710px)': {
+        fontSize: '16px',
+    },
+    '@media (max-width: 590px)': {
+        // fontSize: '14px',
+        width: '50%',
+        marginLeft: '10px',
+        marginRight: '0'
+    },
+    '@media (max-width: 440px)': {
+        fontSize: '12px',
+    },
 };
 
 export const Title = {
-    color: '#32E7FF', fontSize: '18px', fontWeight: '500'
+    color: '#32E7FF',
+    fontSize: '18px',
+    fontWeight: '500',
+    margin: '18px 0',
+    '@media (max-width: 710px)': {
+        fontSize: '14px',
+    },
+    '@media (max-width: 440px)': {
+        fontSize: '10px',
+    },
 }

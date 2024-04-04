@@ -1,16 +1,19 @@
 import React, {useState} from 'react';
 
-import { HIAM,
+import {
+    HIAM,
     MainImg,
     MainImgMargin,
     MainName,
     MainSectionWrap,
     MainTextStyle,
-    MainTextWrap, RRX } from "./style/index.js";
+    MainTextWrap, RRX
+} from "./style/index.js";
 
 import {MainText} from "../../Data/index.js";
 import robot2 from "../../../public/robot2.png";
 import robot1 from "../../../public/robot1.png";
+import {Avatar, Box, Typography} from "@mui/material";
 
 function Home() {
 
@@ -25,47 +28,48 @@ function Home() {
     };
 
     return (
-        <div style={MainSectionWrap}>
-            <div style={MainTextWrap}>
-                <div style={HIAM}>HI, I`M</div>
+        <Box sx={MainSectionWrap}>
+            <Box sx={MainTextWrap}>
+                <Box sx={HIAM}>HI, I`M</Box>
                 <div style={{display: 'flex', alignItems: 'center'}}>
-                    <div style={MainName}><span
+                    <Box sx={MainName}><span
                         style={{color: 'red'}}>R</span><span style={{color: 'orange'}}>O</span><span
-                        style={{color: 'yellow'}}>B</span><span style={{color: 'blue'}}>O</span><span style={{color: 'indigo'}}>-</span><span
+                        style={{color: 'yellow'}}>B</span><span style={{color: 'blue'}}>O</span><span
+                        style={{color: 'indigo'}}>-</span><span
                         style={{color: 'red'}}>R</span><span style={{color: 'orange'}}>A</span><span
                         style={{color: 'yellow'}}>I</span><span style={{color: 'green'}}>N</span><span
                         style={{color: 'blue'}}>B</span><span style={{color: 'indigo'}}>O</span><span
                         style={{color: '#c72b96'}}>W</span>&nbsp;<span
                         style={{color: 'red'}}>X</span>
-                    </div>
+                    </Box>
                 </div>
 
-                <p style={MainTextStyle}>{MainText}</p>
-            </div>
+                <Typography sx={MainTextStyle}>{MainText}</Typography>
+            </Box>
 
-            <div style={MainImgMargin}>
+            <Box sx={MainImgMargin}>
                 {isHovered ? (
-                    <img
+                    <Avatar
                         src={robot2}
-                        style={MainImg}
+                        sx={MainImg}
                         onMouseLeave={handleMouseLeave}
                         alt='robot'
                     />
                 ) : (
                     <div style={{position: 'relative'}}>
-                        <img
+                        <Avatar
                             src={robot1}
-                            style={MainImg}
+                            sx={MainImg}
                             onMouseEnter={handleMouseEnter}
                             alt='robot'
                         />
-                        <div style={RRX}>$RRX
-                        </div>
+                        <Box sx={RRX}>$RRX
+                        </Box>
                     </div>
                 )}
-            </div>
+            </Box>
 
-        </div>
+        </Box>
     );
 }
 

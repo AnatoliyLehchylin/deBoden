@@ -4,6 +4,7 @@ import ContentCopyIcon from "@mui/icons-material/ContentCopy.js";
 import robot3 from "../../../public/robot3.png";
 
 import { Wrapper, WrapLeft, How, ContractAddress, WrapRight, Img } from "./style/index.js";
+import {Box} from "@mui/material";
 
 function HowToBuy() {
 
@@ -22,8 +23,8 @@ function HowToBuy() {
     };
 
     return (
-        <div style={Wrapper}>
-            <div style={WrapLeft}>
+        <Box sx={Wrapper}>
+            <Box sx={WrapLeft}>
                 <p style={How}>HOW TO BUY</p>
                 <p>{HowToBuyTitle}</p>
                 <p>Contract Address:</p>
@@ -39,16 +40,16 @@ function HowToBuy() {
                     <li style={{marginBottom: '15px'}}>{HowToBuyThird}</li>
                     <li>{HowToBuyFour}</li>
                 </ol>
-            </div>
+            </Box>
 
-            <div style={WrapRight}>
+            <Box sx={WrapRight}>
                 <img
                     src={robot3}
                     style={Img}
                     alt='robot'
                 />
-            </div>
-        </div>
+            </Box>
+        </Box>
     );
 }
 
