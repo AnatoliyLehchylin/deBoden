@@ -18,13 +18,15 @@ function FooterComponent() {
             <div style={ContentWrap}>
                 <Avatar src={robotHead} sx={avatar}/>
                 <Box sx={NameWrap}><span
-                    style={{color: 'red'}}>R</span><span style={{color: 'orange'}}>O</span><span
-                    style={{color: 'yellow'}}>B</span><span style={{color: 'blue'}}>O</span><span style={{color: 'indigo'}}>-</span><span
-                    style={{color: 'red'}}>R</span><span style={{color: 'orange'}}>A</span><span
-                    style={{color: 'yellow'}}>I</span><span style={{color: 'green'}}>N</span><span
-                    style={{color: 'blue'}}>B</span><span style={{color: 'indigo'}}>O</span><span
-                    style={{color: '#c72b96'}}>W</span>&nbsp;<span
-                    style={{color: 'red'}}>X</span></Box>
+                    style={{color: 'red'}}>P</span><span style={{color: 'orange'}}>R</span><span
+                    style={{color: 'yellow'}}>I</span><span style={{color: 'blue'}}>D</span><span style={{color: 'indigo'}}>E</span><span
+                    style={{color: 'red'}}>B</span><span style={{color: 'orange'}}>O</span><span
+                    style={{color: 'yellow'}}>T</span><span style={{color: 'green'}}>-</span><span
+                    style={{color: 'blue'}}>X</span>
+                    {/*<span style={{color: 'indigo'}}>X</span>*/}
+                    {/*<span style={{color: '#c72b96'}}>W</span>&nbsp;<span*/}
+                    {/*style={{color: 'red'}}>X</span>*/}
+                </Box>
                 <Box sx={FooterText}>{Footer}</Box>
                 <Box sx={Follow}>
                     Follow us on 𝕏, Telegram, TikTok, Birdeye & DEX Screener to stay informed of our last updates.

@@ -38,6 +38,9 @@ export const buyNow = {
         fontWeight: '400',
         padding: '3px 3px',
     },
+    '@media (max-width: 440px)': {
+        alignItems: 'center'
+    },
 };
 
 export const socSeti = {
@@ -90,7 +93,9 @@ export const WrapMiddle = {
         marginBottom: '20px'
     },
     '@media (max-width: 440px)': {
-        position: 'relative'
+        position: 'relative',
+        marginBottom: '0px',
+        alignItems: 'center'
     },
 };
 

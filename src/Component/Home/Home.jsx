@@ -33,14 +33,15 @@ function Home() {
                 <Box sx={HIAM}>HI, I`M</Box>
                 <div style={{display: 'flex', alignItems: 'center'}}>
                     <Box sx={MainName}><span
-                        style={{color: 'red'}}>R</span><span style={{color: 'orange'}}>O</span><span
-                        style={{color: 'yellow'}}>B</span><span style={{color: 'blue'}}>O</span><span
-                        style={{color: 'indigo'}}>-</span><span
-                        style={{color: 'red'}}>R</span><span style={{color: 'orange'}}>A</span><span
-                        style={{color: 'yellow'}}>I</span><span style={{color: 'green'}}>N</span><span
-                        style={{color: 'blue'}}>B</span><span style={{color: 'indigo'}}>O</span><span
-                        style={{color: '#c72b96'}}>W</span>&nbsp;<span
-                        style={{color: 'red'}}>X</span>
+                        style={{color: 'red'}}>P</span><span style={{color: 'orange'}}>R</span><span
+                        style={{color: 'yellow'}}>I</span><span style={{color: 'blue'}}>D</span><span
+                        style={{color: 'indigo'}}>E</span><span
+                        style={{color: 'red'}}>B</span><span style={{color: 'orange'}}>O</span><span
+                        style={{color: 'yellow'}}>T</span><span style={{color: 'green'}}>-</span><span
+                        style={{color: 'blue'}}>X</span>
+                        {/*<span style={{color: 'indigo'}}>O</span><span*/}
+                        {/*style={{color: '#c72b96'}}>W</span>&nbsp;<span*/}
+                        {/*style={{color: 'red'}}>X</span>*/}
                     </Box>
                 </div>
 
@@ -63,7 +64,7 @@ function Home() {
                             onMouseEnter={handleMouseEnter}
                             alt='robot'
                         />
-                        <Box sx={RRX}>$RRX
+                        <Box sx={RRX}>$PBX
                         </Box>
                     </div>
                 )}

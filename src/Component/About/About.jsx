@@ -18,7 +18,9 @@ function About() {
             <div style={WrapContent}>
                 <p style={Name}>ABOUT</p>
                 <Box sx={WrappTitle}>
-                    <Box sx={{width: '18%'}}>
+                    <Box sx={{width: '18%', '@media (max-width: 440px)': {
+                            width: '50%'
+                        },}}>
                         <img
                             src={robotShlyapa}
                             style={{width: '100%', borderTopLeftRadius: '10px', borderBottomRightRadius: '10px'}}
@@ -26,7 +28,10 @@ function About() {
                         />
                     </Box>
                     <Typography sx={Title}>{AboutTitle}</Typography>
-                    <Box sx={{width: '18%'}}>
+                    <Box sx={{width: '18%', '@media (max-width: 440px)': {
+                            width: '50%',
+                            marginTop: '5px'
+                        },}}>
                         <img
                             src={robotTea}
                             style={{width: '100%', borderTopRightRadius: '10px', borderBottomLeftRadius: '10px'}}

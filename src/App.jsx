@@ -146,7 +146,7 @@ function App() {
                                 }} onClick={() => handleClick(4)}>ROADMAP
                                 </Button>
                             </Box> :
-                            <Box sx={{boxSizing: 'border-box', padding: '10px'}} onClick={burgerMenu}>
+                            <Box sx={{boxSizing: 'border-box', padding: '10px 10px 0 10px'}} onClick={burgerMenu}>
                                 <MenuIcon fontSize='large' color='primary'
                                           sx={{'@media (min-width: 441px)': {display: 'none'}}}/>
                             </Box>
