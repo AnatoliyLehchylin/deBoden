@@ -11,6 +11,9 @@ export const Wrapper = {
         // justifyContent: 'center',
         alignItems: 'center',
     },
+    '@media (max-width: 590px)': {
+        padding: '60px 30px 10px 30px',
+    },
     '@media (max-width: 440px)': {
         padding: '70px 20px 10px 20px',
     },
@@ -21,7 +24,7 @@ export const WrapLeft = {
     display: 'flex',
     flexDirection: 'column',
     color: '#E1E1E1',
-    fontSize: '14px',
+    fontSize: '16px',
     paddingRight: '60px',
     '@media (max-width: 1100px)': {
         width: '70%',
