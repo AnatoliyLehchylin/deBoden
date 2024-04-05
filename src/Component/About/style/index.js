@@ -73,7 +73,7 @@ export const Text = {
         fontSize: '12px',
     },
     '@media (max-width: 440px)': {
-        fontSize: '10px',
+        fontSize: '12px',
     },
 };
 
