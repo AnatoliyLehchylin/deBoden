@@ -112,7 +112,7 @@ function App() {
                                 borderRadius: '8px',
                                 position: 'absolute',
                                 top: '40px',
-                                right: '45px',
+                                right: '24px',
                                 backgroundColor: 'rgba(45, 215, 240, 0.7)',
                                 '@media (min-width: 440px)': {
                                     display: 'none'

@@ -152,11 +152,11 @@ export const RRX = {
         fontWeight: '500',
     },
     '@media (max-width: 590px)': {
-        width: '40px',
-        height: '40px',
-        top: '16px',
-        left: '107px',
-        fontSize: '14px',
+        width: '50px',
+        height: '50px',
+        top: '22px',
+        left: '144px',
+        fontSize: '16px',
         fontWeight: '500',
     },
 };

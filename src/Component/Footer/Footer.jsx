@@ -29,7 +29,7 @@ function FooterComponent() {
                 </Box>
                 <Box sx={FooterText}>{Footer}</Box>
                 <Box sx={Follow}>
-                    Follow us on 𝕏, Telegram, TikTok, Birdeye & DEX Screener to stay informed of our last updates.
+                    Follow us on 𝕏, Telegram & TikTok to stay informed of our last updates.
                 </Box>
                 <div style={SocSetiWrap}>
                     <a href="https://ukr.net" target="_blank" style={{display: 'flex'}}>

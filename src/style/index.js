@@ -134,7 +134,8 @@ export const ButtonNav = {
         width: '115px',
         fontSize: '14px',
         padding: '5px 5px',
-        marginBottom: '10px'
+        marginBottom: '10px',
+        marginRight: '10px'
     },
     ':hover': {
         color: '#000000',

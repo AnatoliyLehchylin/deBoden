@@ -20,7 +20,7 @@ export const WrapLeft = {
     width: '60%',
     display: 'flex',
     flexDirection: 'column',
-    color: '#BABABA',
+    color: '#E1E1E1',
     fontSize: '14px',
     paddingRight: '60px',
     '@media (max-width: 1100px)': {
@@ -35,7 +35,7 @@ export const WrapLeft = {
         width: '100%',
     },
     '@media (max-width: 440px)': {
-        fontSize: '12px',
+        fontSize: '14px',
     },
 };
 
