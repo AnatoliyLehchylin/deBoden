@@ -32,19 +32,19 @@ function FooterComponent() {
                     Follow us on 𝕏, Telegram & TikTok to stay informed of our last updates.
                 </Box>
                 <div style={SocSetiWrap}>
-                    <a href="https://ukr.net" target="_blank" style={{display: 'flex'}}>
+                    <a href="https://pridebot-x.netlify.app/" target="_blank" style={{display: 'flex'}}>
                         <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>
                     </a>
                     <a href="https://twitter.com/PrideBotX" target="_blank" style={{display: 'flex', marginLeft: '20px'}}>
                         <Avatar src={X} sx={{...socSeti, filter: 'invert(100%)'}} alt="X"/>
                     </a>
-                    <a href="https://ukr.net" target="_blank" style={{display: 'flex', marginLeft: '20px'}}>
+                    <a href="https://pridebot-x.netlify.app/" target="_blank" style={{display: 'flex', marginLeft: '20px'}}>
                         <Avatar src={tictok} sx={{...socSeti, filter: 'invert(100%)'}} alt="Tic-Tok"/>
                     </a>
-                    <a href="https://ukr.net" target="_blank" style={MarginSocSeti}>
+                    <a href="https://pridebot-x.netlify.app/" target="_blank" style={MarginSocSeti}>
                         <Avatar src={birdeyeOld} sx={socSeti} alt="birdeye"/>
                     </a>
-                    <a href="https://ukr.net" target="_blank" style={MarginSocSeti}>
+                    <a href="https://pridebot-x.netlify.app/" target="_blank" style={MarginSocSeti}>
                         <Avatar src={dexscreener} sx={socSeti} alt="dexscreener"/>
                     </a>
                 </div>

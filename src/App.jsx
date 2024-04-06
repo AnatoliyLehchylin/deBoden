@@ -77,7 +77,7 @@ function App() {
                 <Box sx={ButtonWrap}>
 
                     <Box sx={WrapMiddle}>
-                        <a href="https://birdeye.so/token/F1n2Tn7Eb9jTbSQiqy2Z7G4VTbkreHGQqcRKKmwZv726?chain=solana"
+                        <a href="https://pridebot-x.netlify.app/"
                            target="_blank">
                             <Button sx={{
                                 ...buyNow, '@media (max-width: 1100px)': {
@@ -87,19 +87,19 @@ function App() {
                         </a>
 
                         <Box sx={{display: 'flex', alignItems: 'center'}}>
-                            <a href="https://ukr.net" target="_blank" style={{display: 'flex'}}>
+                            <a href="https://pridebot-x.netlify.app/" target="_blank" style={{display: 'flex'}}>
                                 <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>
                             </a>
                             <a href="https://twitter.com/PrideBotX" target="_blank" style={MarginSocSeti}>
                                 <Avatar src={X} sx={socSeti} alt="X"/>
                             </a>
-                            <a href="https://ukr.net" target="_blank" style={MarginSocSeti}>
+                            <a href="https://pridebot-x.netlify.app/" target="_blank" style={MarginSocSeti}>
                                 <Avatar src={tictok} sx={socSeti} alt="Tic-Tok"/>
                             </a>
-                            <a href="https://ukr.net" target="_blank" style={MarginSocSeti}>
+                            <a href="https://pridebot-x.netlify.app/" target="_blank" style={MarginSocSeti}>
                                 <Avatar src={birdeye} sx={socSeti} alt="birdeye"/>
                             </a>
-                            <a href="https://ukr.net" target="_blank" style={MarginSocSeti}>
+                            <a href="https://pridebot-x.netlify.app/" target="_blank" style={MarginSocSeti}>
                                 <Avatar src={dexscreener} sx={socSeti} alt="dexscreener"/>
                             </a>
                         </Box>
@@ -159,7 +159,7 @@ function App() {
                     </Box>
 
 
-                    <a href="https://birdeye.so/token/F1n2Tn7Eb9jTbSQiqy2Z7G4VTbkreHGQqcRKKmwZv726?chain=solana"
+                    <a href="https://pridebot-x.netlify.app/"
                        target="_blank">
                         <Button sx={buyNow}>BUY NOW</Button>
                     </a>
@@ -214,19 +214,19 @@ function App() {
                             display: 'none'
                         }
                     }}>
-                        <a href="https://ukr.net" target="_blank" style={{display: 'flex'}}>
+                        <a href="https://pridebot-x.netlify.app/" target="_blank" style={{display: 'flex'}}>
                             <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>
                         </a>
                         <a href="https://twitter.com/PrideBotX" target="_blank" style={MarginSocSeti}>
                             <Avatar src={X} sx={socSeti} alt="X"/>
                         </a>
-                        <a href="https://ukr.net" target="_blank" style={MarginSocSeti}>
+                        <a href="https://pridebot-x.netlify.app/" target="_blank" style={MarginSocSeti}>
                             <Avatar src={tictok} sx={socSeti} alt="Tic-Tok"/>
                         </a>
-                        <a href="https://ukr.net" target="_blank" style={MarginSocSeti}>
+                        <a href="https://pridebot-x.netlify.app/" target="_blank" style={MarginSocSeti}>
                             <Avatar src={birdeye} sx={socSeti} alt="birdeye"/>
                         </a>
-                        <a href="https://ukr.net" target="_blank" style={MarginSocSeti}>
+                        <a href="https://pridebot-x.netlify.app/" target="_blank" style={MarginSocSeti}>
                             <Avatar src={dexscreener} sx={socSeti} alt="dexscreener"/>
                         </a>
                     </Box>
