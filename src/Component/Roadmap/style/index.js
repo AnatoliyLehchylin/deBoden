@@ -23,6 +23,7 @@ export const WrapSection = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
+    justifyContent: 'flex-end',
     color: '#FFFFFF',
     fontSize: '14px',
     '@media (max-width: 440px)': {

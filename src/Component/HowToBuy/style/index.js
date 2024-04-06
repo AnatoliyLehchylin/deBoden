@@ -59,7 +59,7 @@ export const WrapRight = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingTop: '70px',
+    paddingTop: '150px',
     width: '400px',
     height: '400px',
     '@media (max-width: 1100px)': {

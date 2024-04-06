@@ -35,7 +35,7 @@ function FooterComponent() {
                     <a href="https://ukr.net" target="_blank" style={{display: 'flex'}}>
                         <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>
                     </a>
-                    <a href="https://ukr.net" target="_blank" style={{display: 'flex', marginLeft: '20px'}}>
+                    <a href="https://twitter.com/PrideBotX" target="_blank" style={{display: 'flex', marginLeft: '20px'}}>
                         <Avatar src={X} sx={{...socSeti, filter: 'invert(100%)'}} alt="X"/>
                     </a>
                     <a href="https://ukr.net" target="_blank" style={{display: 'flex', marginLeft: '20px'}}>
@@ -48,7 +48,7 @@ function FooterComponent() {
                         <Avatar src={dexscreener} sx={socSeti} alt="dexscreener"/>
                     </a>
                 </div>
-                <Typography sx={Email}>Contact us: <span>there will be an email here</span></Typography>
+                <Typography sx={Email}>Contact us: <span style={{color: '#FFFFFF'}}>pridebotx@gmail.com</span></Typography>
             </div>
         </div>
 

@@ -90,7 +90,7 @@ function App() {
                             <a href="https://ukr.net" target="_blank" style={{display: 'flex'}}>
                                 <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>
                             </a>
-                            <a href="https://ukr.net" target="_blank" style={MarginSocSeti}>
+                            <a href="https://twitter.com/PrideBotX" target="_blank" style={MarginSocSeti}>
                                 <Avatar src={X} sx={socSeti} alt="X"/>
                             </a>
                             <a href="https://ukr.net" target="_blank" style={MarginSocSeti}>
@@ -217,7 +217,7 @@ function App() {
                         <a href="https://ukr.net" target="_blank" style={{display: 'flex'}}>
                             <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>
                         </a>
-                        <a href="https://ukr.net" target="_blank" style={MarginSocSeti}>
+                        <a href="https://twitter.com/PrideBotX" target="_blank" style={MarginSocSeti}>
                             <Avatar src={X} sx={socSeti} alt="X"/>
                         </a>
                         <a href="https://ukr.net" target="_blank" style={MarginSocSeti}>
