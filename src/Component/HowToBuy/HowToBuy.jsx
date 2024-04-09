@@ -9,7 +9,7 @@ import {Box} from "@mui/material";
 function HowToBuy() {
 
     const copyToClipboard = () => {
-        const textToCopy = 'here will be the address';
+        const textToCopy = 'HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y';
 
         const textarea = document.createElement('textarea');
         textarea.value = textToCopy;
@@ -29,9 +29,9 @@ function HowToBuy() {
                 <p>{HowToBuyTitle}</p>
                 <p>Contract Address:</p>
                 <div style={ContractAddress}>
-                    <a href="https://snowtrace.io/address/0x13E793E76C38A6362f3F712c4AE365a9174f9b56"
+                    <a href="https://solscan.io/account/DgdadMRR3JpyyoRhHqwfMdhJVBC1cQiYsH16vxEkCzHb"
                        target="_blank"
-                       style={{marginRight: '5px', color: '#112f93'}}>here will be the address</a>
+                       style={{marginRight: '5px', color: '#112f93'}}>HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y</a>
                     <ContentCopyIcon sx={{cursor: 'pointer', color: '#000000'}} onClick={copyToClipboard}/>
                 </div>
                 <ol style={{paddingLeft: '14px'}}>

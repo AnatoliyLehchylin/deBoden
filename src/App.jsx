@@ -87,13 +87,13 @@ function App() {
                         </a>
 
                         <Box sx={{display: 'flex', alignItems: 'center'}}>
-                            <a href="https://pridebot-x.netlify.app/" target="_blank" style={{display: 'flex'}}>
+                            <a href="https://t.me/PriBotX" target="_blank" style={{display: 'flex'}}>
                                 <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>
                             </a>
                             <a href="https://twitter.com/PrideBotX" target="_blank" style={MarginSocSeti}>
                                 <Avatar src={X} sx={socSeti} alt="X"/>
                             </a>
-                            <a href="https://pridebot-x.netlify.app/" target="_blank" style={MarginSocSeti}>
+                            <a href="https://www.tiktok.com/@pridebotx" target="_blank" style={MarginSocSeti}>
                                 <Avatar src={tictok} sx={socSeti} alt="Tic-Tok"/>
                             </a>
                             <a href="https://pridebot-x.netlify.app/" target="_blank" style={MarginSocSeti}>
@@ -214,13 +214,13 @@ function App() {
                             display: 'none'
                         }
                     }}>
-                        <a href="https://pridebot-x.netlify.app/" target="_blank" style={{display: 'flex'}}>
+                        <a href="https://t.me/PriBotX" target="_blank" style={{display: 'flex'}}>
                             <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>
                         </a>
                         <a href="https://twitter.com/PrideBotX" target="_blank" style={MarginSocSeti}>
                             <Avatar src={X} sx={socSeti} alt="X"/>
                         </a>
-                        <a href="https://pridebot-x.netlify.app/" target="_blank" style={MarginSocSeti}>
+                        <a href="https://www.tiktok.com/@pridebotx" target="_blank" style={MarginSocSeti}>
                             <Avatar src={tictok} sx={socSeti} alt="Tic-Tok"/>
                         </a>
                         <a href="https://pridebot-x.netlify.app/" target="_blank" style={MarginSocSeti}>
