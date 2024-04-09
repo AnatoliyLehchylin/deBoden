@@ -41,7 +41,7 @@ function FooterComponent() {
                     <a href="https://www.tiktok.com/@pridebotx" target="_blank" style={{display: 'flex', marginLeft: '20px'}}>
                         <Avatar src={tictok} sx={{...socSeti, filter: 'invert(100%)'}} alt="Tic-Tok"/>
                     </a>
-                    <a href="https://pridebot-x.netlify.app/" target="_blank" style={MarginSocSeti}>
+                    <a href="https://birdeye.so/token/HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y?chain=solana&utm_source=rugcheck" target="_blank" style={MarginSocSeti}>
                         <Avatar src={birdeyeOld} sx={socSeti} alt="birdeye"/>
                     </a>
                     <a href="https://pridebot-x.netlify.app/" target="_blank" style={MarginSocSeti}>
