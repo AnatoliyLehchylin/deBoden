@@ -31,7 +31,8 @@ function HowToBuy() {
                 <div style={ContractAddress}>
                     <a href="https://solscan.io/account/DgdadMRR3JpyyoRhHqwfMdhJVBC1cQiYsH16vxEkCzHb"
                        target="_blank"
-                       style={{marginRight: '5px', color: '#112f93'}}>HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y</a>
+                       style={{marginRight: '5px', color: '#112f93', fontSize: '14px', wordBreak: 'break-all'}}>
+                        HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y</a>
                     <ContentCopyIcon sx={{cursor: 'pointer', color: '#000000'}} onClick={copyToClipboard}/>
                 </div>
                 <ol style={{paddingLeft: '14px'}}>

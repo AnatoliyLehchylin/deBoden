@@ -48,10 +48,11 @@ export const How = {
 
 export const ContractAddress = {
     display: 'flex',
+    alignItems: 'center',
     backgroundColor: '#C3F9FD',
     padding: '10px',
     borderRadius: '3px',
-    width: 'max-content',
+    width: 'auto',
     marginBottom: '10px'
 };
 
