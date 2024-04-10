@@ -87,7 +87,7 @@ function App() {
                         </a>
 
                         <Box sx={{display: 'flex', alignItems: 'center'}}>
-                            <a href="https://t.me/PriBotX" target="_blank" style={{display: 'flex'}}>
+                            <a href="https://t.me/PribotXXX" target="_blank" style={{display: 'flex'}}>
                                 <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>
                             </a>
                             <a href="https://twitter.com/PrideBotX" target="_blank" style={MarginSocSeti}>
@@ -214,7 +214,7 @@ function App() {
                             display: 'none'
                         }
                     }}>
-                        <a href="https://t.me/PriBotX" target="_blank" style={{display: 'flex'}}>
+                        <a href="https://t.me/PribotXXX" target="_blank" style={{display: 'flex'}}>
                             <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>
                         </a>
                         <a href="https://twitter.com/PrideBotX" target="_blank" style={MarginSocSeti}>

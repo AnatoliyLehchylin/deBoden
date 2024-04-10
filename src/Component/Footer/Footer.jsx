@@ -32,7 +32,7 @@ function FooterComponent() {
                     Follow us on 𝕏, Telegram & TikTok to stay informed of our last updates.
                 </Box>
                 <div style={SocSetiWrap}>
-                    <a href="https://t.me/PriBotX" target="_blank" style={{display: 'flex'}}>
+                    <a href="https://t.me/PribotXXX" target="_blank" style={{display: 'flex'}}>
                         <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>
                     </a>
                     <a href="https://twitter.com/PrideBotX" target="_blank" style={{display: 'flex', marginLeft: '20px'}}>
