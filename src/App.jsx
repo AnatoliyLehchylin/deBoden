@@ -77,7 +77,7 @@ function App() {
                 <Box sx={ButtonWrap}>
 
                     <Box sx={WrapMiddle}>
-                        <a href="https://pridebot-x.netlify.app/"
+                        <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y&outputSymbol=PBX&fixed=in"
                            target="_blank">
                             <Button sx={{
                                 ...buyNow, '@media (max-width: 1100px)': {
@@ -159,7 +159,7 @@ function App() {
                     </Box>
 
 
-                    <a href="https://pridebot-x.netlify.app/"
+                    <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y&outputSymbol=PBX&fixed=in"
                        target="_blank">
                         <Button sx={buyNow}>BUY NOW</Button>
                     </a>
