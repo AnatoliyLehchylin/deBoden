@@ -99,7 +99,7 @@ function App() {
                             <a href="https://birdeye.so/token/HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y?chain=solana&utm_source=rugcheck" target="_blank" style={MarginSocSeti}>
                                 <Avatar src={birdeye} sx={socSeti} alt="birdeye"/>
                             </a>
-                            <a href="https://pridebot-x.netlify.app/" target="_blank" style={MarginSocSeti}>
+                            <a href="https://dexscreener.com/solana/gtth1xxakps3gmvzg134js4rhyv1goqhxqkfu1ceodtt" target="_blank" style={MarginSocSeti}>
                                 <Avatar src={dexscreener} sx={socSeti} alt="dexscreener"/>
                             </a>
                         </Box>
@@ -226,7 +226,7 @@ function App() {
                         <a href="https://birdeye.so/token/HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y?chain=solana&utm_source=rugcheck" target="_blank" style={MarginSocSeti}>
                             <Avatar src={birdeye} sx={socSeti} alt="birdeye"/>
                         </a>
-                        <a href="https://pridebot-x.netlify.app/" target="_blank" style={MarginSocSeti}>
+                        <a href="https://dexscreener.com/solana/gtth1xxakps3gmvzg134js4rhyv1goqhxqkfu1ceodtt" target="_blank" style={MarginSocSeti}>
                             <Avatar src={dexscreener} sx={socSeti} alt="dexscreener"/>
                         </a>
                     </Box>
