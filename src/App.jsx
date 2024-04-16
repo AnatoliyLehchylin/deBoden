@@ -8,6 +8,10 @@ import tictok from '../public/tik-tok.png';
 import X from '../public/XXX.png';
 import fax from '../public/fax-machine-press-button-beep_g13on34o.mp3';
 
+import bodenMech from '../public/boden-mech.png';
+import trempMech from '../public/tremp-mech.png';
+import star from '../public/star1.png';
+
 import Card from "./Component/Card/Card.jsx";
 import FooterComponent from "./Component/Footer/Footer.jsx";
 import HowToBuy from "./Component/HowToBuy/HowToBuy.jsx";
@@ -24,7 +28,9 @@ import {
     ButtonNav,
     MarginSocSeti,
     CardWrap,
-    WrapMiddle
+    WrapMiddle,
+    BodenStyle,
+    TrempStyle
 } from "./style/index.js";
 
 import {Avatar, Box, Button} from "@mui/material";
@@ -233,35 +239,50 @@ function App() {
                 </Box>
             </Box>
 
-            <div ref={sectionRefs[0]}>
-                <Home/>
-            </div>
+            {/*<div ref={sectionRefs[0]}>*/}
+            {/*    <Home/>*/}
+            {/*</div>*/}
 
-            <div ref={sectionRefs[1]}>
-                <About/>
-            </div>
 
-            <Box sx={CardWrap}>
-                <Card index={0}/>
-                <Card index={1}/>
-                <Card index={2}/>
-                <Card index={3}/>
-                <Card index={4}/>
+            <Box sx={{display: 'flex', margin: '0 auto', width: '100%', justifyContent: 'center', alignItems: 'center'}}>
+                <Box sx={BodenStyle}>
+                    <img src={bodenMech} style={{width: '400px', height: '400px'}}/>
+                </Box>
+                {/*<Box>*/}
+                {/*    <img src={star} style={{width: '70px', height: '70px'}}/>*/}
+                {/*</Box>*/}
+                <Box sx={TrempStyle}>
+                    <img src={trempMech} style={{width: '400px', height: '400px'}}/>
+                </Box>
             </Box>
 
-            <div ref={sectionRefs[2]}>
-                <Tocenomics/>
-            </div>
 
-            <div ref={sectionRefs[3]}>
-                <HowToBuy/>
-            </div>
 
-            <div ref={sectionRefs[4]}>
-                <Roadmap/>
-            </div>
+            {/*<div ref={sectionRefs[1]}>*/}
+            {/*    <About/>*/}
+            {/*</div>*/}
 
-            <FooterComponent/>
+            {/*<Box sx={CardWrap}>*/}
+            {/*    <Card index={0}/>*/}
+            {/*    <Card index={1}/>*/}
+            {/*    <Card index={2}/>*/}
+            {/*    <Card index={3}/>*/}
+            {/*    <Card index={4}/>*/}
+            {/*</Box>*/}
+
+            {/*<div ref={sectionRefs[2]}>*/}
+            {/*    <Tocenomics/>*/}
+            {/*</div>*/}
+
+            {/*<div ref={sectionRefs[3]}>*/}
+            {/*    <HowToBuy/>*/}
+            {/*</div>*/}
+
+            {/*<div ref={sectionRefs[4]}>*/}
+            {/*    <Roadmap/>*/}
+            {/*</div>*/}
+
+            {/*<FooterComponent/>*/}
 
         </div>
     )
