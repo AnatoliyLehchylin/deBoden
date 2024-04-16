@@ -172,21 +172,21 @@ export const BodenStyle = {
     width: '400px',
     height: '400px',
     marginTop: '50px',
-    // animation: 'bodenAnimation 1s infinite alternate ease-in-out',
-    // '@keyframes bodenAnimation': {
-    //     '0%, 100%': {
-    //         transform: 'translate(0, 0)'
-    //     },
-    //     '25%': {
-    //         transform: 'translate(10px, -20px)'
-    //     },
-    //     '50%': {
-    //         transform: 'translate(-20px, 10px)'
-    //     },
-    //     '75%': {
-    //         transform: 'translate(20px, -10px)'
-    //     },
-    // },
+    animation: 'bodenAnimation 1s infinite alternate ease-in-out',
+    '@keyframes bodenAnimation': {
+        '0%, 100%': {
+            transform: 'translate(0, 0)'
+        },
+        '25%': {
+            transform: 'translate(10px, -20px)'
+        },
+        '50%': {
+            transform: 'translate(-20px, 10px)'
+        },
+        '75%': {
+            transform: 'translate(20px, -10px)'
+        },
+    },
 };
 
 export const TrempStyle = {
@@ -196,21 +196,21 @@ export const TrempStyle = {
     width: '400px',
     height: '400px',
     marginTop: '50px',
-    // animation: 'trempAnimation 1s infinite alternate ease-in-out',
-    // '@keyframes trempAnimation': {
-    //     '0%, 100%': {
-    //         transform: 'translate(0, 0)'
-    //     },
-    //     '25%': {
-    //         transform: 'translate(-10px, 20px)'
-    //     },
-    //     '50%': {
-    //         transform: 'translate(20px, -10px)'
-    //     },
-    //     '75%': {
-    //         transform: 'translate(-20px, 10px)'
-    //     },
-    // },
+    animation: 'trempAnimation 1s infinite alternate ease-in-out',
+    '@keyframes trempAnimation': {
+        '0%, 100%': {
+            transform: 'translate(0, 0)'
+        },
+        '25%': {
+            transform: 'translate(-10px, 20px)'
+        },
+        '50%': {
+            transform: 'translate(20px, -10px)'
+        },
+        '75%': {
+            transform: 'translate(-20px, 10px)'
+        },
+    },
 }
 
 

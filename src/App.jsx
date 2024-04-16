@@ -14,6 +14,9 @@ import trempMech from '../public/tremp-mech.png';
 import star from '../public/star1.png';
 import blood from '../public/blood.png';
 import soundMech from '../public/sound.mp3';
+import de from '../public/de.png';
+import bate from '../public/bate.png';
+import vs from '../public/vs.png';
 
 import Card from "./Component/Card/Card.jsx";
 import FooterComponent from "./Component/Footer/Footer.jsx";
@@ -102,9 +105,15 @@ function App() {
 
     };
 
-    const StyledRating = styled(Rating)({
+    const StyledRatingBoden = styled(Rating)({
         '& .MuiRating-iconFilled': {
-            color: '#ff3d47',
+            color: '#be131d'
+        },
+    });
+
+    const StyledRatingTremp = styled(Rating)({
+        '& .MuiRating-iconFilled': {
+            color: '#0c2b8d',
         },
     });
 
@@ -311,12 +320,21 @@ function App() {
             {/*    <Home/>*/}
             {/*</div>*/}
 
-            {champion === '' ? <Box sx={{display: 'flex', justifyContent:'center', fontSize: '32px', fontWeight: '800', margin: '10px auto 70px auto'}}>
-                <Typography sx={{color: '#143ec9', fontSize: '32px', fontWeight: '800'}}>de</Typography>
-                <Typography sx={{color: '#ef0b35', fontSize: '32px', fontWeight: '800'}}>Boden</Typography>
-                <Typography sx={{color: '#000000', fontSize: '32px', fontWeight: '800', margin:'0 5px'}}>VS</Typography>
-                <Typography sx={{color: '#143ec9', fontSize: '32px', fontWeight: '800'}}>Tramp</Typography>
-                <Typography sx={{color: '#ef0b35', fontSize: '32px', fontWeight: '800'}}>bate</Typography>
+            {champion === '' ? <Box sx={{display: 'flex', maxWidth: '1080px', width: '100%', alignItems: 'center', justifyContent:'center', fontSize: '32px', fontWeight: '800', margin: '10px auto 70px auto'}}>
+                <Box>
+                    <img src={de} style={{width: '400px'}}/>
+                </Box>
+                <Box>
+                    <img src={vs} style={{width: '280px'}}/>
+                </Box>
+                <Box>
+                    <img src={bate} style={{width: '400px'}}/>
+                </Box>
+                {/*<Typography sx={{color: '#143ec9', fontSize: '32px', fontWeight: '800'}}>de</Typography>*/}
+                {/*<Typography sx={{color: '#ef0b35', fontSize: '32px', fontWeight: '800'}}>Boden</Typography>*/}
+                {/*<Typography sx={{color: '#000000', fontSize: '32px', fontWeight: '800', margin:'0 5px'}}>VS</Typography>*/}
+                {/*<Typography sx={{color: '#143ec9', fontSize: '32px', fontWeight: '800'}}>Tramp</Typography>*/}
+                {/*<Typography sx={{color: '#ef0b35', fontSize: '32px', fontWeight: '800'}}>bate</Typography>*/}
             </Box> : null}
 
             {champion !== "" ? <Typography sx={{textAlign: 'center', fontSize: '32px', fontWeight: '800', color: '#ff3d47'}}>
@@ -332,7 +350,7 @@ function App() {
                             }}
                         >
                             {/*<Rating name="read-only" value={value} readOnly />*/}
-                            <StyledRating
+                            <StyledRatingBoden
                                 name="customized-color"
                                 value={valueBoden}
                                 readOnly
@@ -358,7 +376,7 @@ function App() {
                             }}
                         >
                             {/*<Rating name="read-only" value={value} readOnly />*/}
-                            <StyledRating
+                            <StyledRatingTremp
                                 name="customized-color"
                                 value={valueTremp}
                                 readOnly
