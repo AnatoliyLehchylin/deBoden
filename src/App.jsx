@@ -1,5 +1,6 @@
 import './App.css'
 import React, {useEffect, useRef, useState} from "react";
+import { styled } from '@mui/material/styles';
 
 import Telegram from '../public/Telegram.webp';
 import birdeye from '../public/Birdeye.jpg';
@@ -11,6 +12,8 @@ import fax from '../public/fax-machine-press-button-beep_g13on34o.mp3';
 import bodenMech from '../public/boden-mech.png';
 import trempMech from '../public/tremp-mech.png';
 import star from '../public/star1.png';
+import blood from '../public/blood.png';
+import soundMech from '../public/sound.mp3';
 
 import Card from "./Component/Card/Card.jsx";
 import FooterComponent from "./Component/Footer/Footer.jsx";
@@ -33,17 +36,78 @@ import {
     TrempStyle
 } from "./style/index.js";
 
-import {Avatar, Box, Button} from "@mui/material";
+import {Avatar, Box, Button, Typography, Rating} from "@mui/material";
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import MenuIcon from '@mui/icons-material/Menu';
 
 
 function App() {
 
+    const [touch, setTouch] = useState(null);
+    const [redBlood, setRedBlood] = useState(null);
+    const [valueBoden, setValueBoden] = useState(5);
+    const [valueTremp, setValueTremp] = useState(5);
+    const [champion, setChampion] = useState("");
+
     const [isPress, setIsPress] = useState([true, false, false, false, false]);
     const [isPressBurger, setIsPressBurger] = useState(false);
     const sectionRefs = [useRef(), useRef(), useRef(), useRef(), useRef()];
 
-    const sound = new Audio(fax);
+    const sound = new Audio(soundMech);
+
+    useEffect(() => {
+        if(valueBoden === 0) {
+            setChampion("Tremp");
+
+            setTimeout(() => {
+                setChampion('');
+                setValueBoden(5);
+                setValueTremp(5);
+            }, 3000);
+        }
+
+        if(valueTremp === 0) {
+            setChampion("Boden");
+
+            setTimeout(() => {
+                setChampion('');
+                setValueBoden(5);
+                setValueTremp(5);
+            }, 3000);
+        }
+
+    }, [valueBoden, valueTremp])
+
+
+
+    const handleTouch = async (index) => {
+        await sound.play();
+        setTouch(index);
+        setRedBlood(index);
+
+        setTimeout(() => {
+            setTouch(null);
+        }, 800);
+
+        setTimeout(() => {
+            setRedBlood(null);
+        }, 1600);
+
+        if (index === 1) {
+            setValueBoden(prevState => prevState - 1)
+        } else {
+            setValueTremp(prevState => prevState - 1)
+        }
+
+    };
+
+    const StyledRating = styled(Rating)({
+        '& .MuiRating-iconFilled': {
+            color: '#ff3d47',
+        },
+    });
+
 
     window.addEventListener('scroll', function () {
         const header = document.getElementById('header');
@@ -79,182 +143,241 @@ function App() {
 
     return (
         <div>
-            <Box id='header' sx={HeaderWrap}>
-                <Box sx={ButtonWrap}>
+            {/*<Box id='header' sx={HeaderWrap}>*/}
+            {/*    <Box sx={ButtonWrap}>*/}
 
-                    <Box sx={WrapMiddle}>
-                        <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y&outputSymbol=PBX&fixed=in"
-                           target="_blank">
-                            <Button sx={{
-                                ...buyNow, '@media (max-width: 1100px)': {
-                                    display: 'flex'
-                                }
-                            }}>BUY NOW</Button>
-                        </a>
+            {/*        <Box sx={WrapMiddle}>*/}
+            {/*            <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y&outputSymbol=PBX&fixed=in"*/}
+            {/*               target="_blank">*/}
+            {/*                <Button sx={{*/}
+            {/*                    ...buyNow, '@media (max-width: 1100px)': {*/}
+            {/*                        display: 'flex'*/}
+            {/*                    }*/}
+            {/*                }}>BUY NOW</Button>*/}
+            {/*            </a>*/}
 
-                        <Box sx={{display: 'flex', alignItems: 'center'}}>
-                            <a href="https://t.me/Pride_Bot_X" target="_blank" style={{display: 'flex'}}>
-                                <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>
-                            </a>
-                            <a href="https://twitter.com/PrideBotX" target="_blank" style={MarginSocSeti}>
-                                <Avatar src={X} sx={socSeti} alt="X"/>
-                            </a>
-                            <a href="https://www.tiktok.com/@pridebotx" target="_blank" style={MarginSocSeti}>
-                                <Avatar src={tictok} sx={socSeti} alt="Tic-Tok"/>
-                            </a>
-                            <a href="https://birdeye.so/token/HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y?chain=solana&utm_source=rugcheck" target="_blank" style={MarginSocSeti}>
-                                <Avatar src={birdeye} sx={socSeti} alt="birdeye"/>
-                            </a>
-                            <a href="https://dexscreener.com/solana/gtth1xxakps3gmvzg134js4rhyv1goqhxqkfu1ceodtt" target="_blank" style={MarginSocSeti}>
-                                <Avatar src={dexscreener} sx={socSeti} alt="dexscreener"/>
-                            </a>
-                        </Box>
+            {/*            <Box sx={{display: 'flex', alignItems: 'center'}}>*/}
+            {/*                <a href="https://t.me/Pride_Bot_X" target="_blank" style={{display: 'flex'}}>*/}
+            {/*                    <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>*/}
+            {/*                </a>*/}
+            {/*                <a href="https://twitter.com/PrideBotX" target="_blank" style={MarginSocSeti}>*/}
+            {/*                    <Avatar src={X} sx={socSeti} alt="X"/>*/}
+            {/*                </a>*/}
+            {/*                <a href="https://www.tiktok.com/@pridebotx" target="_blank" style={MarginSocSeti}>*/}
+            {/*                    <Avatar src={tictok} sx={socSeti} alt="Tic-Tok"/>*/}
+            {/*                </a>*/}
+            {/*                <a href="https://birdeye.so/token/HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y?chain=solana&utm_source=rugcheck"*/}
+            {/*                   target="_blank" style={MarginSocSeti}>*/}
+            {/*                    <Avatar src={birdeye} sx={socSeti} alt="birdeye"/>*/}
+            {/*                </a>*/}
+            {/*                <a href="https://dexscreener.com/solana/gtth1xxakps3gmvzg134js4rhyv1goqhxqkfu1ceodtt"*/}
+            {/*                   target="_blank" style={MarginSocSeti}>*/}
+            {/*                    <Avatar src={dexscreener} sx={socSeti} alt="dexscreener"/>*/}
+            {/*                </a>*/}
+            {/*            </Box>*/}
 
-                        {isPressBurger ?
-                            <Box id='burger' sx={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                padding: '10px',
-                                borderRadius: '8px',
-                                position: 'absolute',
-                                top: '40px',
-                                right: '24px',
-                                backgroundColor: 'rgba(45, 215, 240, 0.7)',
-                                '@media (min-width: 440px)': {
-                                    display: 'none'
-                                }
-                            }}>
-                                <Button sx={{
-                                    ...ButtonNav, marginLeft: '0',
-                                    backgroundColor: isPress[0] ? '#0e8308 !important' : '#c40668',
-                                    boxShadow: isPress[0] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'
-                                }} onClick={() => handleClick(0)}>HOME
-                                </Button>
-                                <Button sx={{
-                                    ...ButtonNav,
-                                    backgroundColor: isPress[1] ? '#0e8308 !important' : '#c40668',
-                                    boxShadow: isPress[1] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'
-                                }} onClick={() => handleClick(1)}>ABOUT
-                                </Button>
-                                <Button sx={{
-                                    ...ButtonNav,
-                                    backgroundColor: isPress[2] ? '#0e8308 !important' : '#c40668',
-                                    boxShadow: isPress[2] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'
-                                }} onClick={() => handleClick(2)}>TOKENOMICS
-                                </Button>
-                                <Button sx={{
-                                    ...ButtonNav,
-                                    backgroundColor: isPress[3] ? '#0e8308 !important' : '#c40668',
-                                    boxShadow: isPress[3] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'
-                                }} onClick={() => handleClick(3)}>HOW TO BUY
-                                </Button>
-                                <Button sx={{
-                                    ...ButtonNav,
-                                    backgroundColor: isPress[4] ? '#0e8308 !important' : '#c40668',
-                                    boxShadow: isPress[4] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'
-                                }} onClick={() => handleClick(4)}>ROADMAP
-                                </Button>
-                            </Box> :
-                            <Box sx={{padding: '15px 15px 0 15px', margin: '0'}} onClick={burgerMenu}>
-                                <MenuIcon fontSize='large' color='primary'
-                                          sx={{'@media (min-width: 441px)': {display: 'none'}}}/>
-                            </Box>
+            {/*            {isPressBurger ?*/}
+            {/*                <Box id='burger' sx={{*/}
+            {/*                    display: 'flex',*/}
+            {/*                    flexDirection: 'column',*/}
+            {/*                    padding: '10px',*/}
+            {/*                    borderRadius: '8px',*/}
+            {/*                    position: 'absolute',*/}
+            {/*                    top: '40px',*/}
+            {/*                    right: '24px',*/}
+            {/*                    backgroundColor: 'rgba(45, 215, 240, 0.7)',*/}
+            {/*                    '@media (min-width: 440px)': {*/}
+            {/*                        display: 'none'*/}
+            {/*                    }*/}
+            {/*                }}>*/}
+            {/*                    <Button sx={{*/}
+            {/*                        ...ButtonNav, marginLeft: '0',*/}
+            {/*                        backgroundColor: isPress[0] ? '#0e8308 !important' : '#c40668',*/}
+            {/*                        boxShadow: isPress[0] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'*/}
+            {/*                    }} onClick={() => handleClick(0)}>HOME*/}
+            {/*                    </Button>*/}
+            {/*                    <Button sx={{*/}
+            {/*                        ...ButtonNav,*/}
+            {/*                        backgroundColor: isPress[1] ? '#0e8308 !important' : '#c40668',*/}
+            {/*                        boxShadow: isPress[1] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'*/}
+            {/*                    }} onClick={() => handleClick(1)}>ABOUT*/}
+            {/*                    </Button>*/}
+            {/*                    <Button sx={{*/}
+            {/*                        ...ButtonNav,*/}
+            {/*                        backgroundColor: isPress[2] ? '#0e8308 !important' : '#c40668',*/}
+            {/*                        boxShadow: isPress[2] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'*/}
+            {/*                    }} onClick={() => handleClick(2)}>TOKENOMICS*/}
+            {/*                    </Button>*/}
+            {/*                    <Button sx={{*/}
+            {/*                        ...ButtonNav,*/}
+            {/*                        backgroundColor: isPress[3] ? '#0e8308 !important' : '#c40668',*/}
+            {/*                        boxShadow: isPress[3] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'*/}
+            {/*                    }} onClick={() => handleClick(3)}>HOW TO BUY*/}
+            {/*                    </Button>*/}
+            {/*                    <Button sx={{*/}
+            {/*                        ...ButtonNav,*/}
+            {/*                        backgroundColor: isPress[4] ? '#0e8308 !important' : '#c40668',*/}
+            {/*                        boxShadow: isPress[4] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'*/}
+            {/*                    }} onClick={() => handleClick(4)}>ROADMAP*/}
+            {/*                    </Button>*/}
+            {/*                </Box> :*/}
+            {/*                <Box sx={{padding: '15px 15px 0 15px', margin: '0'}} onClick={burgerMenu}>*/}
+            {/*                    <MenuIcon fontSize='large' color='primary'*/}
+            {/*                              sx={{'@media (min-width: 441px)': {display: 'none'}}}/>*/}
+            {/*                </Box>*/}
 
-                        }
+            {/*            }*/}
 
-                    </Box>
+            {/*        </Box>*/}
 
 
-                    <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y&outputSymbol=PBX&fixed=in"
-                       target="_blank">
-                        <Button sx={buyNow}>BUY NOW</Button>
-                    </a>
+            {/*        <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y&outputSymbol=PBX&fixed=in"*/}
+            {/*           target="_blank">*/}
+            {/*            <Button sx={buyNow}>BUY NOW</Button>*/}
+            {/*        </a>*/}
 
-                    <Box sx={ButtonWrapNav}>
-                        <Button sx={{
-                            ...ButtonNav, marginLeft: '0',
-                            backgroundColor: isPress[0] ? '#0e8308 !important' : '#c40668',
-                            boxShadow: isPress[0] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b',
-                            '@media (max-width: 710px)': {
-                                width: '100px',
-                                fontSize: '12px',
-                                marginLeft: '0px',
-                                padding: '3px 3px',
-                            },
-                            '@media (max-width: 590px)': {
-                                width: '77px',
-                                fontSize: '10px',
-                                marginLeft: '0px',
-                                padding: '3px 2px',
-                            }
-                        }} onClick={() => handleClick(0)}>HOME
-                        </Button>
-                        <Button sx={{
-                            ...ButtonNav,
-                            backgroundColor: isPress[1] ? '#0e8308 !important' : '#c40668',
-                            boxShadow: isPress[1] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'
-                        }} onClick={() => handleClick(1)}>ABOUT
-                        </Button>
-                        <Button sx={{
-                            ...ButtonNav,
-                            backgroundColor: isPress[2] ? '#0e8308 !important' : '#c40668',
-                            boxShadow: isPress[2] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'
-                        }} onClick={() => handleClick(2)}>TOKENOMICS
-                        </Button>
-                        <Button sx={{
-                            ...ButtonNav,
-                            backgroundColor: isPress[3] ? '#0e8308 !important' : '#c40668',
-                            boxShadow: isPress[3] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'
-                        }} onClick={() => handleClick(3)}>HOW TO BUY
-                        </Button>
-                        <Button sx={{
-                            ...ButtonNav,
-                            backgroundColor: isPress[4] ? '#0e8308 !important' : '#c40668',
-                            boxShadow: isPress[4] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'
-                        }} onClick={() => handleClick(4)}>ROADMAP
-                        </Button>
-                    </Box>
+            {/*        <Box sx={ButtonWrapNav}>*/}
+            {/*            <Button sx={{*/}
+            {/*                ...ButtonNav, marginLeft: '0',*/}
+            {/*                backgroundColor: isPress[0] ? '#0e8308 !important' : '#c40668',*/}
+            {/*                boxShadow: isPress[0] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b',*/}
+            {/*                '@media (max-width: 710px)': {*/}
+            {/*                    width: '100px',*/}
+            {/*                    fontSize: '12px',*/}
+            {/*                    marginLeft: '0px',*/}
+            {/*                    padding: '3px 3px',*/}
+            {/*                },*/}
+            {/*                '@media (max-width: 590px)': {*/}
+            {/*                    width: '77px',*/}
+            {/*                    fontSize: '10px',*/}
+            {/*                    marginLeft: '0px',*/}
+            {/*                    padding: '3px 2px',*/}
+            {/*                }*/}
+            {/*            }} onClick={() => handleClick(0)}>HOME*/}
+            {/*            </Button>*/}
+            {/*            <Button sx={{*/}
+            {/*                ...ButtonNav,*/}
+            {/*                backgroundColor: isPress[1] ? '#0e8308 !important' : '#c40668',*/}
+            {/*                boxShadow: isPress[1] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'*/}
+            {/*            }} onClick={() => handleClick(1)}>ABOUT*/}
+            {/*            </Button>*/}
+            {/*            <Button sx={{*/}
+            {/*                ...ButtonNav,*/}
+            {/*                backgroundColor: isPress[2] ? '#0e8308 !important' : '#c40668',*/}
+            {/*                boxShadow: isPress[2] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'*/}
+            {/*            }} onClick={() => handleClick(2)}>TOKENOMICS*/}
+            {/*            </Button>*/}
+            {/*            <Button sx={{*/}
+            {/*                ...ButtonNav,*/}
+            {/*                backgroundColor: isPress[3] ? '#0e8308 !important' : '#c40668',*/}
+            {/*                boxShadow: isPress[3] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'*/}
+            {/*            }} onClick={() => handleClick(3)}>HOW TO BUY*/}
+            {/*            </Button>*/}
+            {/*            <Button sx={{*/}
+            {/*                ...ButtonNav,*/}
+            {/*                backgroundColor: isPress[4] ? '#0e8308 !important' : '#c40668',*/}
+            {/*                boxShadow: isPress[4] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'*/}
+            {/*            }} onClick={() => handleClick(4)}>ROADMAP*/}
+            {/*            </Button>*/}
+            {/*        </Box>*/}
 
-                    <Box sx={{
-                        display: 'flex', alignItems: 'center', '@media (max-width: 1100px)': {
-                            display: 'none'
-                        }
-                    }}>
-                        <a href="https://t.me/Pride_Bot_X" target="_blank" style={{display: 'flex'}}>
-                            <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>
-                        </a>
-                        <a href="https://twitter.com/PrideBotX" target="_blank" style={MarginSocSeti}>
-                            <Avatar src={X} sx={socSeti} alt="X"/>
-                        </a>
-                        <a href="https://www.tiktok.com/@pridebotx" target="_blank" style={MarginSocSeti}>
-                            <Avatar src={tictok} sx={socSeti} alt="Tic-Tok"/>
-                        </a>
-                        <a href="https://birdeye.so/token/HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y?chain=solana&utm_source=rugcheck" target="_blank" style={MarginSocSeti}>
-                            <Avatar src={birdeye} sx={socSeti} alt="birdeye"/>
-                        </a>
-                        <a href="https://dexscreener.com/solana/gtth1xxakps3gmvzg134js4rhyv1goqhxqkfu1ceodtt" target="_blank" style={MarginSocSeti}>
-                            <Avatar src={dexscreener} sx={socSeti} alt="dexscreener"/>
-                        </a>
-                    </Box>
-                </Box>
-            </Box>
+            {/*        <Box sx={{*/}
+            {/*            display: 'flex', alignItems: 'center', '@media (max-width: 1100px)': {*/}
+            {/*                display: 'none'*/}
+            {/*            }*/}
+            {/*        }}>*/}
+            {/*            <a href="https://t.me/Pride_Bot_X" target="_blank" style={{display: 'flex'}}>*/}
+            {/*                <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>*/}
+            {/*            </a>*/}
+            {/*            <a href="https://twitter.com/PrideBotX" target="_blank" style={MarginSocSeti}>*/}
+            {/*                <Avatar src={X} sx={socSeti} alt="X"/>*/}
+            {/*            </a>*/}
+            {/*            <a href="https://www.tiktok.com/@pridebotx" target="_blank" style={MarginSocSeti}>*/}
+            {/*                <Avatar src={tictok} sx={socSeti} alt="Tic-Tok"/>*/}
+            {/*            </a>*/}
+            {/*            <a href="https://birdeye.so/token/HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y?chain=solana&utm_source=rugcheck"*/}
+            {/*               target="_blank" style={MarginSocSeti}>*/}
+            {/*                <Avatar src={birdeye} sx={socSeti} alt="birdeye"/>*/}
+            {/*            </a>*/}
+            {/*            <a href="https://dexscreener.com/solana/gtth1xxakps3gmvzg134js4rhyv1goqhxqkfu1ceodtt"*/}
+            {/*               target="_blank" style={MarginSocSeti}>*/}
+            {/*                <Avatar src={dexscreener} sx={socSeti} alt="dexscreener"/>*/}
+            {/*            </a>*/}
+            {/*        </Box>*/}
+            {/*    </Box>*/}
+            {/*</Box>*/}
 
             {/*<div ref={sectionRefs[0]}>*/}
             {/*    <Home/>*/}
             {/*</div>*/}
 
+            {champion === '' ? <Box sx={{display: 'flex', justifyContent:'center', fontSize: '32px', fontWeight: '800', margin: '10px auto 70px auto'}}>
+                <Typography sx={{color: '#143ec9', fontSize: '32px', fontWeight: '800'}}>de</Typography>
+                <Typography sx={{color: '#ef0b35', fontSize: '32px', fontWeight: '800'}}>Boden</Typography>
+                <Typography sx={{color: '#000000', fontSize: '32px', fontWeight: '800', margin:'0 5px'}}>VS</Typography>
+                <Typography sx={{color: '#143ec9', fontSize: '32px', fontWeight: '800'}}>Tramp</Typography>
+                <Typography sx={{color: '#ef0b35', fontSize: '32px', fontWeight: '800'}}>bate</Typography>
+            </Box> : null}
 
-            <Box sx={{display: 'flex', margin: '0 auto', width: '100%', justifyContent: 'center', alignItems: 'center'}}>
-                <Box sx={BodenStyle}>
-                    <img src={bodenMech} style={{width: '400px', height: '400px'}}/>
+            {champion !== "" ? <Typography sx={{textAlign: 'center', fontSize: '32px', fontWeight: '800', color: '#ff3d47'}}>
+                {champion } Win!
+            </Typography> :
+                <Box
+                    sx={{display: 'flex', margin: '0 auto', width: '100%', justifyContent: 'center', alignItems: 'center'}}>
+
+                    <Box sx={{display: 'flex', flexDirection: 'column'}}>
+                        <Box
+                            sx={{
+                                '& > legend': { mt: 5 },
+                            }}
+                        >
+                            {/*<Rating name="read-only" value={value} readOnly />*/}
+                            <StyledRating
+                                name="customized-color"
+                                value={valueBoden}
+                                readOnly
+                                icon={<FavoriteIcon fontSize="inherit" />}
+                                emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
+                            />
+                        </Box>
+
+                        <Box sx={{...BodenStyle, marginRight: touch === 2 ? '-230px' : '0px', zIndex: touch === 2 ? '1' : '0'}} onClick={() => handleTouch(1)}>
+
+                            <img src={bodenMech} style={{width: '400px', height: '400px', paddingBottom: '10px'}}/>
+                            <img src={blood} style={{display: redBlood === 1 ? 'flex' : 'none', position: 'absolute', top: '125px', right: '260px', width: '10px' }}/>
+                            <img src={star} style={{display: touch === 2 ? 'flex' : 'none', width: '70px', height: '70px'}}/>
+
+                        </Box>
+                    </Box>
+
+
+                    <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'flex-end'}}>
+                        <Box
+                            sx={{
+                                '& > legend': { mt: 5 },
+                            }}
+                        >
+                            {/*<Rating name="read-only" value={value} readOnly />*/}
+                            <StyledRating
+                                name="customized-color"
+                                value={valueTremp}
+                                readOnly
+                                icon={<FavoriteIcon fontSize="inherit" />}
+                                emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
+                            />
+                        </Box>
+
+                        <Box sx={{...TrempStyle, marginLeft: touch === 1 ? '-370px' : '0', zIndex: touch === 1 ? '1' : '0'}} onClick={() => handleTouch(2)}>
+                            <img src={star} style={{display: touch === 1 ? 'flex' : 'none', width: '70px', height: '70px'}}/>
+                            <img src={blood} style={{display: redBlood === 2 ? 'flex' : 'none', position: 'absolute', top: '125px', right: '140px', width: '10px'}}/>
+                            <img src={trempMech} style={{width: '400px', height: '400px', paddingBottom: '50px'}}/>
+                        </Box>
+                    </Box>
+
+
                 </Box>
-                {/*<Box>*/}
-                {/*    <img src={star} style={{width: '70px', height: '70px'}}/>*/}
-                {/*</Box>*/}
-                <Box sx={TrempStyle}>
-                    <img src={trempMech} style={{width: '400px', height: '400px'}}/>
-                </Box>
-            </Box>
+            }
+
 
 
 
