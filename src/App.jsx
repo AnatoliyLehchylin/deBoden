@@ -56,8 +56,8 @@ function App() {
 
     const [touch, setTouch] = useState(null);
     const [redBlood, setRedBlood] = useState(null);
-    const [valueBoden, setValueBoden] = useState(2);
-    const [valueTremp, setValueTremp] = useState(2);
+    const [valueBoden, setValueBoden] = useState(5);
+    const [valueTremp, setValueTremp] = useState(5);
     const [champion, setChampion] = useState("");
     const [copyAdress, setCopyAdress] = useState(false);
 
