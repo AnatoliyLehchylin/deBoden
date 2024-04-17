@@ -24,9 +24,9 @@ a:hover {
 
 body {
   /*background-color: #767aee;*/
-  background-image: url("../public/flag4.webp");
+  background-image: url("../public/flag4.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   margin: 0;
   /*padding: 0 20px;*/
   display: flex;

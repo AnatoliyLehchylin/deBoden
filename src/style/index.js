@@ -178,13 +178,13 @@ export const BodenStyle = {
             transform: 'translate(0, 0)'
         },
         '25%': {
-            transform: 'translate(10px, -20px)'
+            transform: 'translate(10px, -10px)'
         },
         '50%': {
-            transform: 'translate(-20px, 10px)'
+            transform: 'translate(-10px, 10px)'
         },
         '75%': {
-            transform: 'translate(20px, -10px)'
+            transform: 'translate(10px, -10px)'
         },
     },
 };
@@ -202,16 +202,29 @@ export const TrempStyle = {
             transform: 'translate(0, 0)'
         },
         '25%': {
-            transform: 'translate(-10px, 20px)'
+            transform: 'translate(-10px, 10px)'
         },
         '50%': {
-            transform: 'translate(20px, -10px)'
+            transform: 'translate(10px, -10px)'
         },
         '75%': {
-            transform: 'translate(-20px, 10px)'
+            transform: 'translate(-10px, 10px)'
         },
     },
-}
+};
+
+export const ContractAddress = {
+    position: 'relative',
+    display: 'flex',
+    alignItems: 'center',
+    // border: '2px solid #000000',
+    // backgroundColor: '#ffffff',
+    padding: '10px',
+    borderRadius: '5px',
+    width: 'auto',
+    marginBottom: '10px',
+    marginRight: '40px'
+};
 
 
 

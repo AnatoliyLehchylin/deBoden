@@ -1,6 +1,6 @@
 import React from 'react';
 import {Avatar, Box, Typography} from "@mui/material";
-import robotHead from "../../../public/robotHead.png";
+import bodenTremp from "../../../public/boden-tremp4.png";
 import Telegram from "../../../public/Telegram.webp";
 import { SocSetiWrap, socSeti, FooterWrap, ContentWrap, avatar, NameWrap, FooterText, Follow, Email } from "./style/index.js";
 import X from "../../../public/XXX.png";
@@ -16,18 +16,12 @@ function FooterComponent() {
     return (
         <div style={FooterWrap}>
             <div style={ContentWrap}>
-                <Avatar src={robotHead} sx={avatar}/>
+                <img src={bodenTremp} style={avatar}/>
                 <Box sx={NameWrap}><span
-                    style={{color: 'red'}}>P</span><span style={{color: 'orange'}}>R</span><span
-                    style={{color: 'yellow'}}>I</span><span style={{color: 'blue'}}>D</span><span style={{color: 'yellowgreen'}}>E</span><span
-                    style={{color: 'red'}}>B</span><span style={{color: 'orange'}}>O</span><span
-                    style={{color: 'yellow'}}>T</span><span style={{color: 'green'}}>-</span><span
-                    style={{color: 'lightblue'}}>X</span>
-                    {/*<span style={{color: 'indigo'}}>X</span>*/}
-                    {/*<span style={{color: '#c72b96'}}>W</span>&nbsp;<span*/}
-                    {/*style={{color: 'red'}}>X</span>*/}
+                    style={{color: 'blue'}}>de</span><span style={{color: 'red'}}>Boden</span><span
+                    style={{color: 'yellowgreen'}}> -- </span><span style={{color: 'blue'}}>Tremp</span><span style={{color: 'red'}}>bate</span>
                 </Box>
-                <Box sx={FooterText}>{Footer}</Box>
+                <Box sx={FooterText}>Legendary battle of the titans!</Box>
                 <Box sx={Follow}>
                     Follow us on 𝕏, Telegram & TikTok to stay informed of our last updates.
                 </Box>
@@ -48,7 +42,7 @@ function FooterComponent() {
                         <Avatar src={dexscreener} sx={socSeti} alt="dexscreener"/>
                     </a>
                 </div>
-                <Typography sx={Email}>Contact us: <span style={{color: '#FFFFFF'}}>pridebotx@gmail.com</span></Typography>
+                <Box sx={Email}>Contact us: <span style={{color: '#000000'}}>pridebotx@gmail.com</span></Box>
             </div>
         </div>
 
