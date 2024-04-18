@@ -157,7 +157,7 @@ function App() {
                     <Box sx={{display: 'flex', justifyContent: 'space-around'}}>
 
                         <Box sx={ContractAddress}>
-                            <a href="https://solscan.io/account/DgdadMRR3JpyyoRhHqwfMdhJVBC1cQiYsH16vxEkCzHb"
+                            <a href="#"
                                target="_blank"
                                style={{marginRight: '5px', color: '#000000', fontSize: '18px', wordBreak: 'break-all'}}>
                                 The contract address will be here</a>
