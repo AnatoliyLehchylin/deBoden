@@ -184,7 +184,7 @@ function App() {
                             <a href="#" target="_blank" style={{display: 'flex'}}>
                                 <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>
                             </a>
-                            <a href="#" target="_blank" style={MarginSocSeti}>
+                            <a href="https://twitter.com/deBodenTrempbat" target="_blank" style={MarginSocSeti}>
                                 <Avatar src={X} sx={socSeti} alt="X"/>
                             </a>
                             {/*<a href="https://www.tiktok.com/@pridebotx" target="_blank" style={MarginSocSeti}>*/}

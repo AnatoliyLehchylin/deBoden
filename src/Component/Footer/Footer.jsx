@@ -27,7 +27,7 @@ function FooterComponent() {
                     <a href="#" target="_blank" style={{display: 'flex'}}>
                         <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>
                     </a>
-                    <a href="#" target="_blank" style={{display: 'flex', marginLeft: '10px'}}>
+                    <a href="https://twitter.com/deBodenTrempbat" target="_blank" style={{display: 'flex', marginLeft: '10px'}}>
                         <Avatar src={X} sx={{...socSeti}} alt="X"/>
                     </a>
                     {/*<a href="https://www.tiktok.com/@pridebotx" target="_blank" style={{display: 'flex', marginLeft: '20px'}}>*/}
@@ -40,7 +40,7 @@ function FooterComponent() {
                         <Avatar src={dexscreener} sx={socSeti} alt="dexscreener"/>
                     </a>
                 </div>
-                <Box sx={Email}>Contact us: <span style={{color: '#000000'}}>email@gmail.com</span></Box>
+                <Box sx={Email}>Contact us: <span style={{color: '#000000'}}>debodenvstrempbate@gmail.com</span></Box>
             </div>
         </div>
 
