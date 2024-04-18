@@ -228,9 +228,9 @@ function App() {
                     fontWeight: '800',
                     animation: 'shakeAnimation 0.5s infinite alternate ease-in-out, colorBlink 0.5s infinite linear',
                     '@keyframes colorBlink': {
-                        '0%': {backgroundColor: '#3253c2'}, // Исходный цвет фона
-                        '50%': {backgroundColor: '#486ddc'}, // Цвет фона для мерцания
-                        '100%': {backgroundColor: '#3253c2'}, // Возврат к исходному цвету фона
+                        '0%': {backgroundColor: '#3253c2'},
+                        '50%': {backgroundColor: '#486ddc'},
+                        '100%': {backgroundColor: '#3253c2'},
                     },
                 }}>
                     {champion} Win!
@@ -241,7 +241,8 @@ function App() {
                         margin: '0 auto',
                         width: '100%',
                         justifyContent: 'center',
-                        alignItems: 'center'
+                        alignItems: 'center',
+                        height: '500px'
                     }}>
 
                     <Box sx={{display: 'flex', flexDirection: 'column'}}>
@@ -263,20 +264,34 @@ function App() {
 
                         <Box sx={{
                             ...BodenStyle,
-                            marginRight: touch === 2 ? '-230px' : '0px',
+                            // marginRight: touch === 2 ? '-230px' : '0px',
                             zIndex: touch === 2 ? '1' : '0'
                         }} onClick={() => handleTouch(1)}>
 
-                            <img src={bodenMech} style={{width: '400px', height: '400px', paddingBottom: '10px'}}/>
+                            <img src={bodenMech} style={{
+                                width: '400px',
+                                height: '400px',
+                                paddingBottom: '10px',
+                                position: 'absolute',
+                                top: '-40px',
+                                right: touch === 2 ? '-265px' : '0px'
+                            }}/>
                             <img src={blood} style={{
                                 display: redBlood === 1 ? 'flex' : 'none',
                                 position: 'absolute',
-                                top: '125px',
+                                top: '85px',
                                 right: '260px',
                                 width: '10px'
                             }}/>
                             <img src={star}
-                                 style={{display: touch === 2 ? 'flex' : 'none', width: '70px', height: '70px'}}/>
+                                 style={{
+                                     display: touch === 2 ? 'flex' : 'none',
+                                     width: '70px',
+                                     height: '70px',
+                                     position: 'absolute',
+                                     top: '130px',
+                                     right:  '-310px'
+                            }}/>
 
                         </Box>
                     </Box>
@@ -300,19 +315,34 @@ function App() {
 
                         <Box sx={{
                             ...TrempStyle,
-                            marginLeft: touch === 1 ? '-370px' : '0',
+                            // marginLeft: touch === 1 ? '-370px' : '0',
                             zIndex: touch === 1 ? '1' : '0'
                         }} onClick={() => handleTouch(2)}>
                             <img src={star}
-                                 style={{display: touch === 1 ? 'flex' : 'none', width: '70px', height: '70px'}}/>
+                                 style={{
+                                     display: touch === 1 ? 'flex' : 'none',
+                                     width: '70px',
+                                     height: '70px',
+                                     position: 'absolute',
+                                     top: '130px',
+                                     left: '-320px'
+                            }}/>
                             <img src={blood} style={{
                                 display: redBlood === 2 ? 'flex' : 'none',
                                 position: 'absolute',
-                                top: '125px',
-                                right: '140px',
-                                width: '10px'
+                                top: '95px',
+                                right: '130px',
+                                width: '10px',
+                                zIndex: '2'
                             }}/>
-                            <img src={trempMech} style={{width: '400px', height: '400px', paddingBottom: '50px'}}/>
+                            <img src={trempMech} style={{
+                                width: '400px',
+                                height: '400px',
+                                paddingBottom: '50px',
+                                position: 'absolute',
+                                top: '-30px',
+                                right: touch === 1 ? '275px' : '0px'
+                            }}/>
                         </Box>
                     </Box>
 
