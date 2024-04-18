@@ -15,7 +15,7 @@ export const socSeti = {
 export const FooterWrap = {
     display: 'flex',
     width: '100%',
-    padding: '25px 0 25px 0',
+    padding: '0px 0 25px 0',
     margin: '0px 0 0 0',
     backgroundColor: '#75747c'
 };
@@ -32,7 +32,8 @@ export const ContentWrap = {
 
 export const avatar = {
     width: '250px',
-    borderRadius: '10px',
+    height: '140px',
+    borderRadius: '5px',
     // '@media (max-width: 1100px)': {
     //     width: '125px',
     //     height: '125px',
@@ -48,7 +49,7 @@ export const avatar = {
 };
 
 export const NameWrap = {
-    fontSize: '28px', color: '#63626b', fontWeight: '500', margin: '30px 0 0 0',
+    fontSize: '28px', color: '#63626b', fontWeight: '500', margin: '0px 0 0 0',
     '@media (max-width: 1100px)': {
         fontSize: '22px',
         fontWeight: '500',
@@ -62,7 +63,7 @@ export const NameWrap = {
 };
 
 export const FooterText = {
-    margin: '20px 0 30px 0', fontSize: '26px', color: '#E1E1E1',
+    margin: '0px 0 0px 0', fontSize: '26px', color: '#000000',
     // '@media (max-width: 1100px)': {
     //     margin: '20px 20px 20px 20px',
     //     fontSize: '18px',
@@ -101,7 +102,7 @@ export const SocSetiWrap = {
 };
 
 export const Email = {
-    fontSize: '18px', color: '#e5e2de',
+    fontSize: '18px', color: '#000000',
     fontFamily: 'Jersey 20',
     // '@media (max-width: 1100px)': {
     //     fontSize: '14px',

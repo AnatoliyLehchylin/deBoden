@@ -45,8 +45,8 @@ export const buyNow = {
 
 export const socSeti = {
     alignItems: 'center',
-    width: '25px',
-    height: '25px',
+    width: '30px',
+    height: '30px',
     transition: 'transform 0.3s ease',
     ':hover': {
         transform: 'scale(1.2)'

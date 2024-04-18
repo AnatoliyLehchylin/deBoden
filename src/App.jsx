@@ -1,5 +1,5 @@
 import './App.css'
-import React, {useEffect, useRef, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {styled} from '@mui/material/styles';
 
 import Telegram from '../public/Telegram.webp';
@@ -7,7 +7,6 @@ import birdeye from '../public/Birdeye.jpg';
 import dexscreener from '../public/Dexscreener.png';
 import tictok from '../public/tik-tok.png';
 import X from '../public/XXX.png';
-import fax from '../public/fax-machine-press-button-beep_g13on34o.mp3';
 
 import bodenMech from '../public/boden-mech.png';
 import trempMech from '../public/tremp-mech.png';
@@ -17,29 +16,22 @@ import soundMech from '../public/sound.mp3';
 import de from '../public/de.png';
 import bate from '../public/bate.png';
 import vs from '../public/vs.png';
-import bodenTremp from '../public/boden-tremp.jpg';
-import bodenTremp1 from '../public/boden-tremp1.jpg';
-import bodenTremp2 from '../public/boden-tremp2.jpg';
-import bodenTremp3 from '../public/boden-tremp3.jpg';
+import bodenTremp from '../public/Gallery1-Ring.png';
+import bodenTremp1 from '../public/Gallery2.png';
+import bodenTremp2 from '../public/Gallery3.png';
+import bodenTremp3 from '../public/Gallery4.png';
 import gerb from '../public/gerb.png';
+import bodenAside from '../public/boden-aside.png';
+import trempAside from '../public/tremp-aside.png';
+import piramide from '../public/piramide-opac.png';
+import fire from '../public/fire.png';
 
-import Card from "./Component/Card/Card.jsx";
 import FooterComponent from "./Component/Footer/Footer.jsx";
-import HowToBuy from "./Component/HowToBuy/HowToBuy.jsx";
-import About from "./Component/About/About.jsx";
-import Tocenomics from "./Component/Tocenomics/Tocenomics.jsx";
-import Home from "./Component/Home/Home.jsx";
-import Roadmap from "./Component/Roadmap/Roadmap.jsx";
+
+
 import {
-    buyNow,
     socSeti,
-    HeaderWrap,
-    ButtonWrap,
-    ButtonWrapNav,
-    ButtonNav,
     MarginSocSeti,
-    CardWrap,
-    WrapMiddle,
     BodenStyle,
     TrempStyle,
     ContractAddress
@@ -48,7 +40,6 @@ import {
 import {Avatar, Box, Button, Typography, Rating} from "@mui/material";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import MenuIcon from '@mui/icons-material/Menu';
 import ContentCopyIcon from "@mui/icons-material/ContentCopy.js";
 
 
@@ -61,17 +52,13 @@ function App() {
     const [champion, setChampion] = useState("");
     const [copyAdress, setCopyAdress] = useState(false);
 
-    const [isPress, setIsPress] = useState([true, false, false, false, false]);
-    const [isPressBurger, setIsPressBurger] = useState(false);
-    const sectionRefs = [useRef(), useRef(), useRef(), useRef(), useRef()];
-
     const sound = new Audio(soundMech);
 
     useEffect(() => {
         if (valueBoden === 0) {
 
             setTimeout(() => {
-                setChampion("Tremp");
+                setChampion("Trempbate");
             }, 800);
 
             setTimeout(() => {
@@ -84,7 +71,7 @@ function App() {
         if (valueTremp === 0) {
 
             setTimeout(() => {
-                setChampion("Boden");
+                setChampion("deBoden");
             }, 800);
 
             setTimeout(() => {
@@ -133,7 +120,7 @@ function App() {
     });
 
     const copyToClipboard = () => {
-        const textToCopy = 'HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y';
+        const textToCopy = 'The contract address will be here';
 
         const textarea = document.createElement('textarea');
         textarea.value = textToCopy;
@@ -147,212 +134,14 @@ function App() {
         setCopyAdress(true);
 
         setTimeout(() => {
-           setCopyAdress(false)
+            setCopyAdress(false)
         }, 1000);
 
     };
 
-    // window.addEventListener('scroll', function () {
-    //     const header = document.getElementById('header');
-    //
-    //     if (window.scrollY > 0) {
-    //         header.style.backgroundColor = '#2DD7F0';
-    //     } else {
-    //         header.style.backgroundColor = 'transparent';
-    //     }
-    // });
-
-    const handleClick = async (index) => {
-        await sound.play();
-        setIsPressBurger(false);
-        const updatedState = isPress.map((_, i) => i === index);
-        setIsPress(updatedState);
-
-        sectionRefs[index].current.scrollIntoView({behavior: 'smooth', block: 'start'});
-
-    }
-
-    const burgerMenu = () => {
-        setIsPressBurger(true);
-    }
-
-
-    document.addEventListener('click', e => {
-        if (e.target.parentElement.id !== 'burger') {
-            setIsPressBurger(false);
-        }
-    });
-
 
     return (
         <div>
-            {/*<Box id='header' sx={HeaderWrap}>*/}
-            {/*    <Box sx={ButtonWrap}>*/}
-
-            {/*        <Box sx={WrapMiddle}>*/}
-            {/*            <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y&outputSymbol=PBX&fixed=in"*/}
-            {/*               target="_blank">*/}
-            {/*                <Button sx={{*/}
-            {/*                    ...buyNow, '@media (max-width: 1100px)': {*/}
-            {/*                        display: 'flex'*/}
-            {/*                    }*/}
-            {/*                }}>BUY NOW</Button>*/}
-            {/*            </a>*/}
-
-            {/*            <Box sx={{display: 'flex', alignItems: 'center'}}>*/}
-            {/*                <a href="https://t.me/Pride_Bot_X" target="_blank" style={{display: 'flex'}}>*/}
-            {/*                    <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>*/}
-            {/*                </a>*/}
-            {/*                <a href="https://twitter.com/PrideBotX" target="_blank" style={MarginSocSeti}>*/}
-            {/*                    <Avatar src={X} sx={socSeti} alt="X"/>*/}
-            {/*                </a>*/}
-            {/*                <a href="https://www.tiktok.com/@pridebotx" target="_blank" style={MarginSocSeti}>*/}
-            {/*                    <Avatar src={tictok} sx={socSeti} alt="Tic-Tok"/>*/}
-            {/*                </a>*/}
-            {/*                <a href="https://birdeye.so/token/HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y?chain=solana&utm_source=rugcheck"*/}
-            {/*                   target="_blank" style={MarginSocSeti}>*/}
-            {/*                    <Avatar src={birdeye} sx={socSeti} alt="birdeye"/>*/}
-            {/*                </a>*/}
-            {/*                <a href="https://dexscreener.com/solana/gtth1xxakps3gmvzg134js4rhyv1goqhxqkfu1ceodtt"*/}
-            {/*                   target="_blank" style={MarginSocSeti}>*/}
-            {/*                    <Avatar src={dexscreener} sx={socSeti} alt="dexscreener"/>*/}
-            {/*                </a>*/}
-            {/*            </Box>*/}
-
-            {/*            {isPressBurger ?*/}
-            {/*                <Box id='burger' sx={{*/}
-            {/*                    display: 'flex',*/}
-            {/*                    flexDirection: 'column',*/}
-            {/*                    padding: '10px',*/}
-            {/*                    borderRadius: '8px',*/}
-            {/*                    position: 'absolute',*/}
-            {/*                    top: '40px',*/}
-            {/*                    right: '24px',*/}
-            {/*                    backgroundColor: 'rgba(45, 215, 240, 0.7)',*/}
-            {/*                    '@media (min-width: 440px)': {*/}
-            {/*                        display: 'none'*/}
-            {/*                    }*/}
-            {/*                }}>*/}
-            {/*                    <Button sx={{*/}
-            {/*                        ...ButtonNav, marginLeft: '0',*/}
-            {/*                        backgroundColor: isPress[0] ? '#0e8308 !important' : '#c40668',*/}
-            {/*                        boxShadow: isPress[0] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'*/}
-            {/*                    }} onClick={() => handleClick(0)}>HOME*/}
-            {/*                    </Button>*/}
-            {/*                    <Button sx={{*/}
-            {/*                        ...ButtonNav,*/}
-            {/*                        backgroundColor: isPress[1] ? '#0e8308 !important' : '#c40668',*/}
-            {/*                        boxShadow: isPress[1] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'*/}
-            {/*                    }} onClick={() => handleClick(1)}>ABOUT*/}
-            {/*                    </Button>*/}
-            {/*                    <Button sx={{*/}
-            {/*                        ...ButtonNav,*/}
-            {/*                        backgroundColor: isPress[2] ? '#0e8308 !important' : '#c40668',*/}
-            {/*                        boxShadow: isPress[2] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'*/}
-            {/*                    }} onClick={() => handleClick(2)}>TOKENOMICS*/}
-            {/*                    </Button>*/}
-            {/*                    <Button sx={{*/}
-            {/*                        ...ButtonNav,*/}
-            {/*                        backgroundColor: isPress[3] ? '#0e8308 !important' : '#c40668',*/}
-            {/*                        boxShadow: isPress[3] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'*/}
-            {/*                    }} onClick={() => handleClick(3)}>HOW TO BUY*/}
-            {/*                    </Button>*/}
-            {/*                    <Button sx={{*/}
-            {/*                        ...ButtonNav,*/}
-            {/*                        backgroundColor: isPress[4] ? '#0e8308 !important' : '#c40668',*/}
-            {/*                        boxShadow: isPress[4] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'*/}
-            {/*                    }} onClick={() => handleClick(4)}>ROADMAP*/}
-            {/*                    </Button>*/}
-            {/*                </Box> :*/}
-            {/*                <Box sx={{padding: '15px 15px 0 15px', margin: '0'}} onClick={burgerMenu}>*/}
-            {/*                    <MenuIcon fontSize='large' color='primary'*/}
-            {/*                              sx={{'@media (min-width: 441px)': {display: 'none'}}}/>*/}
-            {/*                </Box>*/}
-
-            {/*            }*/}
-
-            {/*        </Box>*/}
-
-
-            {/*        <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y&outputSymbol=PBX&fixed=in"*/}
-            {/*           target="_blank">*/}
-            {/*            <Button sx={buyNow}>BUY NOW</Button>*/}
-            {/*        </a>*/}
-
-            {/*        <Box sx={ButtonWrapNav}>*/}
-            {/*            <Button sx={{*/}
-            {/*                ...ButtonNav, marginLeft: '0',*/}
-            {/*                backgroundColor: isPress[0] ? '#0e8308 !important' : '#c40668',*/}
-            {/*                boxShadow: isPress[0] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b',*/}
-            {/*                '@media (max-width: 710px)': {*/}
-            {/*                    width: '100px',*/}
-            {/*                    fontSize: '12px',*/}
-            {/*                    marginLeft: '0px',*/}
-            {/*                    padding: '3px 3px',*/}
-            {/*                },*/}
-            {/*                '@media (max-width: 590px)': {*/}
-            {/*                    width: '77px',*/}
-            {/*                    fontSize: '10px',*/}
-            {/*                    marginLeft: '0px',*/}
-            {/*                    padding: '3px 2px',*/}
-            {/*                }*/}
-            {/*            }} onClick={() => handleClick(0)}>HOME*/}
-            {/*            </Button>*/}
-            {/*            <Button sx={{*/}
-            {/*                ...ButtonNav,*/}
-            {/*                backgroundColor: isPress[1] ? '#0e8308 !important' : '#c40668',*/}
-            {/*                boxShadow: isPress[1] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'*/}
-            {/*            }} onClick={() => handleClick(1)}>ABOUT*/}
-            {/*            </Button>*/}
-            {/*            <Button sx={{*/}
-            {/*                ...ButtonNav,*/}
-            {/*                backgroundColor: isPress[2] ? '#0e8308 !important' : '#c40668',*/}
-            {/*                boxShadow: isPress[2] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'*/}
-            {/*            }} onClick={() => handleClick(2)}>TOKENOMICS*/}
-            {/*            </Button>*/}
-            {/*            <Button sx={{*/}
-            {/*                ...ButtonNav,*/}
-            {/*                backgroundColor: isPress[3] ? '#0e8308 !important' : '#c40668',*/}
-            {/*                boxShadow: isPress[3] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'*/}
-            {/*            }} onClick={() => handleClick(3)}>HOW TO BUY*/}
-            {/*            </Button>*/}
-            {/*            <Button sx={{*/}
-            {/*                ...ButtonNav,*/}
-            {/*                backgroundColor: isPress[4] ? '#0e8308 !important' : '#c40668',*/}
-            {/*                boxShadow: isPress[4] ? '2px 5px 5px #413b3b' : '1px 11px 7px #413b3b'*/}
-            {/*            }} onClick={() => handleClick(4)}>ROADMAP*/}
-            {/*            </Button>*/}
-            {/*        </Box>*/}
-
-            {/*        <Box sx={{*/}
-            {/*            display: 'flex', alignItems: 'center', '@media (max-width: 1100px)': {*/}
-            {/*                display: 'none'*/}
-            {/*            }*/}
-            {/*        }}>*/}
-            {/*            <a href="https://t.me/Pride_Bot_X" target="_blank" style={{display: 'flex'}}>*/}
-            {/*                <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>*/}
-            {/*            </a>*/}
-            {/*            <a href="https://twitter.com/PrideBotX" target="_blank" style={MarginSocSeti}>*/}
-            {/*                <Avatar src={X} sx={socSeti} alt="X"/>*/}
-            {/*            </a>*/}
-            {/*            <a href="https://www.tiktok.com/@pridebotx" target="_blank" style={MarginSocSeti}>*/}
-            {/*                <Avatar src={tictok} sx={socSeti} alt="Tic-Tok"/>*/}
-            {/*            </a>*/}
-            {/*            <a href="https://birdeye.so/token/HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y?chain=solana&utm_source=rugcheck"*/}
-            {/*               target="_blank" style={MarginSocSeti}>*/}
-            {/*                <Avatar src={birdeye} sx={socSeti} alt="birdeye"/>*/}
-            {/*            </a>*/}
-            {/*            <a href="https://dexscreener.com/solana/gtth1xxakps3gmvzg134js4rhyv1goqhxqkfu1ceodtt"*/}
-            {/*               target="_blank" style={MarginSocSeti}>*/}
-            {/*                <Avatar src={dexscreener} sx={socSeti} alt="dexscreener"/>*/}
-            {/*            </a>*/}
-            {/*        </Box>*/}
-            {/*    </Box>*/}
-            {/*</Box>*/}
-
-            {/*<div ref={sectionRefs[0]}>*/}
-            {/*    <Home/>*/}
-            {/*</div>*/}
 
             {champion === '' ?
                 <Box sx={{
@@ -371,7 +160,7 @@ function App() {
                             <a href="https://solscan.io/account/DgdadMRR3JpyyoRhHqwfMdhJVBC1cQiYsH16vxEkCzHb"
                                target="_blank"
                                style={{marginRight: '5px', color: '#000000', fontSize: '18px', wordBreak: 'break-all'}}>
-                                HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y</a>
+                                The contract address will be here</a>
                             <ContentCopyIcon sx={{cursor: 'pointer', color: '#000000'}} onClick={copyToClipboard}/>
                             {copyAdress &&
                                 <Typography sx={{
@@ -392,23 +181,24 @@ function App() {
                             style={{color: '#0c2b8d'}}>bate!</span><span style={{color: '#be131d'}}>!</span></Box>
 
                         <Box sx={{display: 'flex', alignItems: 'center', marginLeft: '100px'}}>
-                            <a href="https://t.me/Pride_Bot_X" target="_blank" style={{display: 'flex'}}>
+                            <a href="#" target="_blank" style={{display: 'flex'}}>
                                 <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>
                             </a>
-                            <a href="https://twitter.com/PrideBotX" target="_blank" style={MarginSocSeti}>
+                            <a href="#" target="_blank" style={MarginSocSeti}>
                                 <Avatar src={X} sx={socSeti} alt="X"/>
                             </a>
-                            <a href="https://www.tiktok.com/@pridebotx" target="_blank" style={MarginSocSeti}>
-                                <Avatar src={tictok} sx={socSeti} alt="Tic-Tok"/>
-                            </a>
-                            <a href="https://birdeye.so/token/HWnMxUdafSiWegB73GD87w8RrQ7NCmuWKZ3pcRBVHM3y?chain=solana&utm_source=rugcheck"
+                            {/*<a href="https://www.tiktok.com/@pridebotx" target="_blank" style={MarginSocSeti}>*/}
+                            {/*    <Avatar src={tictok} sx={socSeti} alt="Tic-Tok"/>*/}
+                            {/*</a>*/}
+                            <a href="#"
                                target="_blank" style={MarginSocSeti}>
                                 <Avatar src={birdeye} sx={socSeti} alt="birdeye"/>
                             </a>
-                            <a href="https://dexscreener.com/solana/gtth1xxakps3gmvzg134js4rhyv1goqhxqkfu1ceodtt"
-                               target="_blank" style={MarginSocSeti}>
+                            <a href="#"
+                               target="_blank" style={{display: 'flex', marginLeft: '15px'}}>
                                 <Avatar src={dexscreener} sx={socSeti} alt="dexscreener"/>
                             </a>
+                            <Box sx={{width: '70px', height: '70px', marginLeft: '30px', color: 'orange', backgroundColor: '#000000', borderRadius: '50%', textAlign: 'center', lineHeight: '70px'}}>$BTD</Box>
                         </Box>
 
                     </Box>
@@ -424,16 +214,25 @@ function App() {
                             <img src={bate} style={{width: '300px', scale: '1.2'}}/>
                         </Box>
                     </Box>
-                    <Box>(attack Boden or Tremp)</Box>
+                    <Box>(attack deBoden or Trempbate)</Box>
                 </Box> : null}
 
             {champion !== "" ?
-                <Box sx={{color: 'orange', width: '1000px', margin: '0 auto', borderRadius: '20px', textAlign: 'center', fontSize: '80px', fontWeight: '800', animation: 'shakeAnimation 0.5s infinite alternate ease-in-out, colorBlink 0.5s infinite linear',
+                <Box sx={{
+                    color: 'orange',
+                    width: '1000px',
+                    margin: '0 auto',
+                    borderRadius: '20px',
+                    textAlign: 'center',
+                    fontSize: '80px',
+                    fontWeight: '800',
+                    animation: 'shakeAnimation 0.5s infinite alternate ease-in-out, colorBlink 0.5s infinite linear',
                     '@keyframes colorBlink': {
                         '0%': {backgroundColor: '#3253c2'}, // Исходный цвет фона
                         '50%': {backgroundColor: '#486ddc'}, // Цвет фона для мерцания
                         '100%': {backgroundColor: '#3253c2'}, // Возврат к исходному цвету фона
-                    },}}>
+                    },
+                }}>
                     {champion} Win!
                 </Box> :
                 <Box
@@ -522,7 +321,68 @@ function App() {
             }
 
             {champion === '' &&
-                <Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', width: '100%', backgroundImage: `url(${gerb})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
+                <Box sx={{display: 'flex', flexDirection: 'column'}}>
+                    <Box sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        width: '100%',
+                        margin: '0px auto ',
+                        padding: '50px 0',
+                        fontSize: '45px',
+                        fontWeight: '600',
+                        color: '#17256e',
+                        backgroundImage: `url(${fire})`,
+                        backgroundSize: 'cover'
+                    }}>
+                        <Box sx={{textAlign: 'center', fontSize: '50px', width: '80%'}}>ABOUT</Box>
+                        <Box sx={{textAlign: 'center', marginBottom: '20px', width: '80%'}}>Who will win the debate? Magnificent deBoden or stunning
+                            Trempbate? You can decide it yourself right here and now! And you can do this three hundred
+                            trillion million billion times :)</Box>
+                        <Box sx={{textAlign: 'center', width: '80%'}}>Our meme coin was released in support of this great event.<br/> Buy <span style={{color: 'darkorange'}}>$deBoden-VS-Trempbate</span> and earn a billion trillion from the duel of the titans!</Box>
+                    </Box>
+                    <Box sx={{display: 'flex', justifyContent: 'space-between', padding: '50px 0', backgroundColor: '#d3e2f6'}}>
+                        <Box sx={{marginLeft: '100px'}}>
+                            <img src={bodenAside} style={{width: '350px', height: '470px'}}/>
+                        </Box>
+                        <Box sx={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            width: '100%',
+                            fontSize: '45px',
+                            fontWeight: '600',
+                            color: '#17256e',
+                            padding: '55px 20px 0 20px',
+                            backgroundImage: `url(${piramide})`,
+                            backgroundSize: '480px 480px',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'center'
+                        }}>
+                            <Box sx={{textAlign: 'start'}}>* 100% Of Liquidity Burned</Box>
+                            <Box sx={{textAlign: 'start', marginBottom: '20px'}}>* TAX SELL: 0%</Box>
+                            <Box sx={{textAlign: 'end'}}>* TAX BUY: 0%</Box>
+                            <Box sx={{textAlign: 'end'}}>* OWNER: Revoked <br/> ( Mint+Freeze )</Box>
+                        </Box>
+                        <Box sx={{marginRight: '100px'}}>
+                            <img src={trempAside} style={{width: '350px', height: '470px'}}/>
+                        </Box>
+                    </Box>
+                </Box>
+            }
+
+
+            {champion === '' &&
+                <Box sx={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    width: '100%',
+                    padding: '50px 0',
+                    backgroundImage: `url(${gerb})`,
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat'
+                }}>
                     <img style={{width: '500px', margin: '20px 10px', borderRadius: '10px'}} src={bodenTremp}/>
                     <img style={{width: '500px', margin: '20px 10px', borderRadius: '10px'}} src={bodenTremp1}/>
                     <img style={{width: '500px', margin: '20px 10px', borderRadius: '10px'}} src={bodenTremp2}/>
@@ -530,35 +390,9 @@ function App() {
                 </Box>
             }
 
-
-            {/*<div ref={sectionRefs[1]}>*/}
-            {/*    <About/>*/}
-            {/*</div>*/}
-
-            {/*<Box sx={CardWrap}>*/}
-            {/*    <Card index={0}/>*/}
-            {/*    <Card index={1}/>*/}
-            {/*    <Card index={2}/>*/}
-            {/*    <Card index={3}/>*/}
-            {/*    <Card index={4}/>*/}
-            {/*</Box>*/}
-
-            {/*<div ref={sectionRefs[2]}>*/}
-            {/*    <Tocenomics/>*/}
-            {/*</div>*/}
-
-            {/*<div ref={sectionRefs[3]}>*/}
-            {/*    <HowToBuy/>*/}
-            {/*</div>*/}
-
-            {/*<div ref={sectionRefs[4]}>*/}
-            {/*    <Roadmap/>*/}
-            {/*</div>*/}
-
             {champion === '' &&
                 <FooterComponent/>
             }
-
 
         </div>
     )
