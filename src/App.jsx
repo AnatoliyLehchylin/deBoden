@@ -181,7 +181,7 @@ function App() {
                             style={{color: '#0c2b8d'}}>bate!</span><span style={{color: '#be131d'}}>!</span></Box>
 
                         <Box sx={{display: 'flex', alignItems: 'center', marginLeft: '100px'}}>
-                            <a href="#" target="_blank" style={{display: 'flex'}}>
+                            <a href="https://t.me/deBoden1" target="_blank" style={{display: 'flex'}}>
                                 <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>
                             </a>
                             <a href="https://twitter.com/deBodenTrempbat" target="_blank" style={MarginSocSeti}>
@@ -369,7 +369,7 @@ function App() {
                         <Box sx={{textAlign: 'center', marginBottom: '20px', width: '80%'}}>Who will win the debate? Magnificent deBoden or stunning
                             Trempbate? You can decide it yourself right here and now! And you can do this three hundred
                             trillion million billion times :)</Box>
-                        <Box sx={{textAlign: 'center', width: '80%'}}>Our meme coin was released in support of this great event.<br/> Buy <span style={{color: 'darkorange'}}>$deBoden-VS-Trempbate</span> and earn a billion trillion from the duel of the titans!</Box>
+                        <Box sx={{textAlign: 'center', width: '80%'}}>Our Memecoin was released in support of this great event.<br/> Buy <span style={{color: 'darkorange'}}>$deBoden-VS-Trempbate</span> and earn a billion trillion from the duel of the titans!</Box>
                     </Box>
                     <Box sx={{display: 'flex', justifyContent: 'space-between', padding: '50px 0', backgroundColor: '#d3e2f6'}}>
                         <Box sx={{marginLeft: '100px'}}>

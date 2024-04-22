@@ -24,7 +24,7 @@ function FooterComponent() {
                     Follow us on 𝕏 & Telegram to stay informed of our last updates.
                 </Box>
                 <div style={SocSetiWrap}>
-                    <a href="#" target="_blank" style={{display: 'flex'}}>
+                    <a href="https://t.me/deBoden1" target="_blank" style={{display: 'flex'}}>
                         <Avatar src={Telegram} sx={socSeti} alt="Telegram"/>
                     </a>
                     <a href="https://twitter.com/deBodenTrempbat" target="_blank" style={{display: 'flex', marginLeft: '10px'}}>
