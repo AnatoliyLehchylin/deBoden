@@ -120,7 +120,7 @@ function App() {
     });
 
     const copyToClipboard = () => {
-        const textToCopy = 'The contract address will be here';
+        const textToCopy = 'E6uDojtPv5SbFZSL3vPiv1awzZhExGTDShQaCAo7n3gG';
 
         const textarea = document.createElement('textarea');
         textarea.value = textToCopy;
@@ -160,7 +160,7 @@ function App() {
                             <a href="#"
                                target="_blank"
                                style={{marginRight: '5px', color: '#000000', fontSize: '18px', wordBreak: 'break-all'}}>
-                                The contract address will be here</a>
+                                E6uDojtPv5SbFZSL3vPiv1awzZhExGTDShQaCAo7n3gG</a>
                             <ContentCopyIcon sx={{cursor: 'pointer', color: '#000000'}} onClick={copyToClipboard}/>
                             {copyAdress &&
                                 <Typography sx={{
